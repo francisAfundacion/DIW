@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<!-- Indica que se usa html 5 => DOCTYPE-->
+
+<html lang="en">
+<head> <!-- Cabecera, dónde se guardan metadatos, como la codificación del doc
+    
+     favicon.cc => podemos crear tu propia icono para quitar el error de javascript
+                en head <link href="favicon ....."
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!--hACE REFERENCIA diseño responsive, podemos linkar algo de google fonts, script...-->
+    <title>Document</title>
+</head>
+<body>
+    <!--Etiquetas a visualizar de la página-->
+    <!-- ETIQUETAS DE TEXTO, PÁRRAFOS Y ENCABEZADOS-->
+     <!--Se utiliza para  estrcuturar de tu página, títulos, substítulos...-->
+    <!--Accedo id con #-->
+    <h1>PROBANDO MARCADORES</h1>
+    <a href="#marcador1">Marcador1</a><br>
+    <a href="#marcador2">Marcador2</a>
+    
+     <h1>Encabezado 1</h1>
+     <h2>Encabezado 2</h2>
+     <h3>Encabezado 3</h3>
+     <h4>Encabezado 4</h4>
+     <h5>Encabezado 5</h5>
+     <h6>Encabezado 6</h6>
+    <!-- Establecer un párrafo con determinado texto
+        Es un elemento en bloque
+        Dar formato a los párrafos con la etiqueta pre
+        
+        
+        -->
+        
+       <p>
+            <pre>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Dolorem incidunt nihil ullam sit quos?
+                Esse corporis ipsum quam autem nulla. Perferendis accusantium ab veritatis, numquam
+                    nostrum porro ipsa ratione obcaecati?
+            </pre>
+        </p>
+        <!--Etiqueta que indica un salto de línea -->
+        <br>
+        <!-- Línea horizontal separatoria-->
+         <hr>
+
+         <!--Etiquetas de formato (NO LAS VAMOS A UTILIZAR YA QUE USAMOS CSS)
+         -->
+            <p><b>Esto es negrita</b></p> <!--Font weight-->
+            <p><i>Esto es itálica</i></p> <!---->
+            <p><u>Esto es subrayado</u></p> <!---->
+            <p><strong>Esto es para recalcar importancia</strong></p>
+            <p><em>Esto es para enfatizar texto</em></p>
+            <p>Esto es <sup>superíndice</sup></p>
+            <p>Esto es  <mark>remarcacado </mark></p>
+            <p>Esto es <ins>insertado</ins></p>
+            <P>Esto es <del>eliminado</del></P>
+            
+                <!--ENLACES-->
+                    <!--HREF => dónde se aloja la página
+                                Ruta abosulta/relativa [...]
+                                title = "" => aparezca este nombre al pasar el puntero por el enlace
+                                target => para que se pueda abrir en otra página     
+                                        _self => valor por defecto, en la propia página
+                                        _blank => para abrir el enlace en otra pestaña
+                                        Elemento en línea => va uno seguido del otro
+                                        nombre por defecto azul
+                                        cuando es visitado violeta
+                                        cuando click sin soltar rojo
+                                 -->
+                                    
+                <a href="https://www.google.com" target="_blank">Google</a><br>
+                <a href="index2.html">index2</a>
+                <a href="mailto:franciscogomez239@gmail.com" target="_blank">Enviar mail</a>
+
+                <!--ENALCE CON ICONO-->
+                <!--img
+                        ATS OBLIGATORIOS
+                         SRC  => RUTA DÓNDE SE ALOJA LA IMAGEN
+                         ALT => TEXTO ALTERANITVO QUE SE VA A MOSTRAR SI LA IMAGEN NO SE CARGA O NO EXISTE, IMPORTANTE PARA LECTORES DE PANTALLA
+                         SI METEMOS LOS ATRIBUTOS DENTRO DE LA PROPIA ETIQUETA  SE ASUME QUE LA UNIDAD
+                        DE MEDIDA ES PX
+                         AUTO => tras darle 50 px de ancho se va a crear un alto proporcional
+                         WIDTH => ANCHO
+                         HEIGHT => ALTO
+                -->
+                <br> 
+                <br>
+                <a href="https://www.google.com" target="_blank"><img src="img/iconoGoogle.png" width="50" height="auto" alt=""></a>
+
+                <!-- MARCADORES
+                    CREAR UN PUNTO DÓNDE TENGA UN ID 
+                    Accedo id con #VALORID
+                -->
+                <h2 id="marcador1">Marcador1</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, natus perferendis odit a odio illo sunt exercitationem voluptates incidunt placeat! Quod, ipsam quasi distinctio voluptates eligendi repellat inventore nam unde</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit voluptas necessitatibus eum facere a, optio expedita recusandae corrupti adipisci doloribus incidunt fugit praesentium odio deleniti nesciunt! Aut esse culpa obcaecati.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nesciunt inventore quasi, ipsum dignissimos est, deserunt asperiores illo eos aliquam laudantium ex eveniet distinctio nihil molestiae ab et autem consequuntur.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <h2 id="marcador2">Marcador2</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum incidunt, quisquam ipsam nam laboriosam ad blanditiis illo, illum facere, vel vitae maxime pariatur quae similique. Libero rerum at hic quos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam inventore saepe dolorem est. Reiciendis sint magni dignissimos quam architecto cupiditate rerum. Libero minus minima earum molestiae omnis nobis et dolorem.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut commodi nihil unde sequi quos voluptate vitae id, iste, aspernatur a numquam deserunt, autem amet! Tenetur, provident. Eum, debitis culpa.</p>
+                <!--LISTAS ORDENADAS, DESORDENADAS,TERMINOS-->
+                <!--type => cambia la visualización de lo que antecede el item de la lista-->
+                <h2>LISTA ORDENADA</h2>
+                <oL type="I">
+                    <!--Por defecto antecede con número-->
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </oL>
+                <H2>LISTA DESORDENADA</H2>
+                <ul type="square">
+                <!--Por defecto antecede con  punto-->
+                    <li>Item1</li>
+                    <li>Item2</li>
+                </ul>
+                <dl>
+                    <dt> <!--termino-->
+                        <dd></dd> <!--descripción, según el navegador aparece con una sangría-->
+                    </dt>
+                </dl>
+                <!--MAPA DE IMÁGENES
+                    insertar img > atributo usemap ="#map"
+                    map name="#mapa"
+                    area (define la forma de de lo que quieres agarrar como enlace)
+                    circle (coord centro,radio)
+
+                -->
+
+                <h1>MAPA IMÁGENES</h1>
+                <map name="mapaEspaña" usemap="#mapaEspaña">
+                    <area  alt="pulsa para ir a galicia" coords="63,15, 99,31" shape="rect" href="https://www.turismo.gal/inicio?langId=es_ES">
+                    <area  alt="pulsa para ir a Asturias" coords="97,5,131,11" shape="rect" href="https://www.asturias.es/">
+                    <!--RADIO DE MOMENTO NO FUNCIONA-->
+                    <area  alt="pulsa para ir a Madrid" coords="143,68,8" shape="radio" href="https://www.madrid.es/portal/site/munimadrid">
+                    <!--POLÍGONO-->
+                </map>
+                <img src="img/comunidadesAutonomas.jfif" usemap="#mapaEspaña" alt="mapa de españa">
+
+            </body>
+        
+</html>
