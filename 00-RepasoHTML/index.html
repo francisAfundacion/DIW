@@ -7,6 +7,26 @@
      favicon.cc => podemos crear tu propia icono para quitar el error de javascript
                 en head <link href="favicon ....."
     -->
+    <style>
+        span {
+            color:red
+        }
+        .rojo{
+            color:red;
+        }
+        .centrado{
+            text-align: center;
+        }
+        #header{
+            font-size:x-large;
+            font-weight: 100;
+        }
+        .submit {
+            width:50px;
+            height:auto;
+        }
+
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <!--hACE REFERENCIA diseño responsive, podemos linkar algo de google fonts, script...-->
@@ -176,8 +196,117 @@
                     <area  alt="pulsa para ir a Madrid" coords="143,68,8" shape="circle" href="https://www.madrid.es/portal/site/munimadrid">
                     <!--POLÍGONO-->
                 </map>
-    
 
+              <!--TABLAS-->
+              <!--
+              <table> => crea tabla
+              <caption> => titulo de una tabla
+              <tr> => crea fila
+              <th> => crea una celda de título
+              formato => lo haremos por css
+              rowspan => fusiona filas
+              colspan => fusiona columnas
+              thead,tbody,tfoot => sirve para agrupar  elementos de la tabla
+              y darle estlo
+              -->
+                <br><br><br><br>
+              <table>
+                    <caption>Título de la tabla</caption>
+                    <tr>
+                        <th> TITULO1</th>
+                        <th> TITULO2</th>
+                    </tr>
+                    <tr>
+                        <td> DATOS 1 </td>
+                        <td>DATOS 2</td>
+                    </tr>
+              </table>
+              <br><br><br>
+            <!--Contenedores a conocer-->
+            <!--div
+             => sirve para agrupar contenido
+
+             span
+             => contenedor en línea, solo ocupa lo que tiene que ocupar
+             => se usa sobre todo para dar estilos a partes de un texto
+            -->
+             <div>
+                <p>hola.</p>
+                <p>Adiós.</p>
+             </div>
+
+            <p>Esto es <span>un</span> párrafo</p>
+
+            <!--CLASES E IDENTIFICADORES-->
+             <!--
+                ¿PARA QUE SIRVE? => identificar un elemento html
+                    - Clases se puede utilizar más de una vez
+                        -
+                        -
+                        -
+                    - Ids deberían llamarse solo una vez
+             -->
+               <p class="rojo"> Este párrafo es rojo.</p>
+               <!-- Lo tenemos identificado como rojo este párrafo, pq con csss
+                queremos que todos los elementos con el class con valor rojo, darles un estilo
+                ¿Cómo la llamamos?
+                    en el css con .valorClass
+                VENTAJAS DE USO CON RESPECTO A ID?
+                Podemos llamar más de una clase ala vez y aplicarselo sobre
+                los elementos con esos valores   
+                --> 
+                <p class="centrado rojo">texto centrado de color rojo</p>
+                <h6 class="rojo">Encabezado 6 rojo</h6>
+
+                <!--
+                    etiquetas semanticas HTML
+                    header
+                    footer
+                    main
+                    nax
+                    section
+                    article
+                    aside
+                    => ORGANIZA LA P WEB
+
+                    la otra opción es crear un contener div que se identifique
+                    como la sección que organize el documentp
+                -->
+
+                <!--IDS => 
+                    => NO SE LLAMA MÁS DE UNA VEZ EN TODO EL DOCUMENTO
+                    => SE REFERENCIA MEDIANTE UN #ID_HAGO_REFERENCIA
+
+                -->
+                    <div id="header">cabecera div con id</div> <!--SOLO UNA VEZ PQ SOLO HAY UNA CABECERA-->
+
+            <!--formularios-->
+
+            <!--
+                <form> => crea formulario
+                    Atributos form:
+                        -action => ruta hacia archivo,
+                        para resolver algo del formulario
+                        -method => GET => NO VIAJAN CIFRADOS
+                                    POST => VIAJAN CIFRADOS
+                <input> => crea cada uno de los campos del formulario
+                <textarea> area de textoo
+            
+            -->
+                    <form id="formularioPrueba">
+                        <label for="inputName">Nombre:</label>
+                        <input  type="text" class="inputName">
+                        <br>
+                        <label for="inpuApellidos">Apellidos:</label>
+                        <input type="text" class="inputApellidos">
+                        <br>
+                        <label for="inputName">Número tarjeta:</label>
+                        <input  class ="inputName" type="number">
+                        <br>
+                        <label for="submit">Enviar</label>
+                        <input type="button" class="submit">
+
+                    </form>
             </body>
         
 </html>
