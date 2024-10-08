@@ -1,0 +1,27 @@
+/*REGLAS CSS
+
+Sintaxis:
+    
+    selector {
+        propiedadCSS :valor;
+        propiedadCSS :valor;
+        propiedadCSS :valor;
+        propiedadCSS :valor;
+        propiedadCSS :valor;
+    }
+
+*/
+
+/*selector etiqueta
+ => llamarlo directamente por la etiqueta del html
+*/
+
+h1 {
+    color:brown;
+}
+
+P{
+    color:yellowgreen;
+}
+
+/*selector universal*/

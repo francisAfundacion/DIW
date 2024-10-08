@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="introducción.css" type="text/css" media="screen">
+    <style>
+        /*selector universal*/
+        /*aplica a todos los elementos del html
+        Muchos elementos tienen un espaciado por defecto
+        un poquito hacia la derecha.Se los podemos quitar
+        con selector universal con padding :0 y margin :0
+        */
+
+        *{
+            padding:0; /*relleno*/
+            margin:0;   /**margin*/
+        
+            /*DIFERENCIA entre padding y margin?
+            
+                padding: ancho dentro del proio elemento
+                margin:espaciado fuera del mismo
+            
+            
+            */
+        
+        }
+        h1 {
+            color:green;
+        }
+        p{
+            color:blueviolet;
+        }
+    </style>
+</head>
+
+<!-- CSS HOJAS DE ESTILO EN CASCAS 
+  
+- DA ESTILO AL HTML
+ 
+CÓMO USARLO?
+    - CREAR DOC CSS EXTERNO.Separamos estructura de lo visual.
+    Más sencillo el mantenimiento y no se mezcle html con css
+        rel  => indica relacion entre el documento html y el que vamos a linkar
+        valor => stylesheet => hojas de estilo
+        href=> dónde halla la hoja de estilo
+        type => indicar el navegador que tipo doc está linkando
+        media => indica el dispositivo en el que se va a abrir este documento,
+        Tiene relación con el disseño responsive
+
+        PUEDO TENER MÁS DE UN CSS LINKADO?
+        SÍ, PERO CON ETIQUETAS LINK SEPRADOS?
+        CÚANDO?
+        Cuando tenemos un diseño responsive
+
+    - CREARLO DE FORMA INTERNA => style => PREVALECE ANTES QUE LA EXTERNA
+    DADO QUE SE EJECUTA DE FORMA SECUENCIAL  Y LA ETIQUETA STYLE ESTÁ DEBAJO QUE LA LÍNEA
+    DÓNDE INDICAMOS LA RELACION DEL HTML CON EL CSS UBICADO EN UN ARCHIVO DIFERENTE.
+    SI PONEMOS !important en la propiedad prevalecera  en comparativa con el de en línea.
+
+    -EN LÍNEA => DENTRO DE LA PROPIA ETIQUETA => STYLE Y EL PAR PROPIEDAD Y VALOR.TIENE MÁS PRIORIDAD
+    QUE EL INTERNO Y EL EXTERNO.
+    EN LÍNEA NUNCA USARLO, A NOSER QUE SEA UN CASO MUY ESPECÍFICO.
+-->
+<body>
+    <h1>INTRODUCCIÓN CSS</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid sapiente expedita recusandae nemo fugiat officiis eos! Facilis, in. Odio perferendis, saepe assumenda accusantium mollitia similique provident nulla voluptatum ad illo!</p>
+
+</body>
+</html>

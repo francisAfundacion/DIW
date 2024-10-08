@@ -286,13 +286,110 @@
                 <form> => crea formulario
                     Atributos form:
                         -action => ruta hacia archivo,
-                        para resolver algo del formulario
-                        -method => GET => NO VIAJAN CIFRADOS
-                                    POST => VIAJAN CIFRADOS
-                <input> => crea cada uno de los campos del formulario
+                        para resolver algo del formulario.Normalmente se pone una página php.
+                        action = "página.php"
+
+                        -method => Cómo se envian los datos del formulario
+                                    GET => NO VIAJAN CIFRADOS
+                                    POST => VIAJAN CIFRADOS(No SE ENVIAN EN LA URL, SE ENVIAN EN EL CUEPO DE LA PETICÓN HTTP)
+                          autocomplete => "on/off" => historial de lo que se ha escrito anteriormente en los campos del formu
+                          target => (por defecto valor "_self",abre el formu en la misma página),_blank (se abre en otra página).
+
+                <input> => crea  una entrada del formulario ,cada uno de los campos del formulario
+                formado por etiquetas, casillas de verificación, checkbox, selectores...
+                    valores del at type 
+                ELEMENTO EN LÍNEA
+                 atributo namename => idnetifica mi caja input, para que cuando demos sumit viaja par nombre y valor en la url
+                 en el cuerpo petición http.
+
+                 placerholder 
+                value => valor por defecto
+                 required => se meta si o sí info en la caja, sino salta un  mensaje
+                step  => flecha para incremenar o decrementar el valor numérico
+                 autofocus => aparezca remarcada la caja del input dónde se indica
+
+                 tamaño de la caja del input => size
+
+                <label> => ASOCIAR UN LEYENDA A UNA ENTRADA INPUT
+                
+                
                 <textarea> area de textoo
             
-            -->
+                    botón submit  => envía el formulario
+                        at value = nombre del botón
+            --> 
+                    <h1>Formulario Iria</h1>
+                    <form action="pagina.php" method="post">
+                        <label for="fnom">Nombre :</label>
+                        <input type="text" id="fnom" name="fnom" size="50" maxlength="10"placeholder ="Tu nombre :"required autofocus>
+                        <br>
+                        <label for="fedad">Edad:</label>
+                        <input type ="number" id="fedad" name="edad" size="50" maxlength="2" value="18"  step="2" required>
+                        <br>
+                        <label for ="fcon">Contraseña:</label>
+                        <input type="password" id="fpass" name="fpass" maxlength="9" pattern="[A-Z]{8}">
+                        <br>
+                        <label for="ffile">Archivo:</label>
+                        <input type="file" id="ffile" name="ffile" accept=".png">
+                        <br>
+                        <label for="fcolor">Escoge el color :</label>
+                        <input type="color" id="fcolor" name="fcolor" value="#ff5733">
+                        <br>
+                        <label for="fdate">Fecha:</label>
+                        <input type="date" id="fdate" min="2018-01-01" max="2023-10-08" value="2022-04.21">
+                        <br>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpiar">
+                        <input type="button"  value ="hola" onclick="alert('Hola')">
+                        <br>
+                         <!--radio-->
+                         <!-- name => de todos los radio button que hagas tiene que ser el mismo
+                         así solo puedes escoger uno de ellos 
+                         SOLO SELECCIONA UNO DEL GRUPO
+                         -->
+                        <br>
+                        <label for="fembutido">embutido</label>
+                        <input type="radio" id="fembutido" name="fcomida" value="Embutido">
+                        <br>
+                        <label for="fpescado">pescado</label>
+                        <input type="radio" id="fpescado" name="fcomida" value="Pescado">
+                        <br>
+                        <label for="Fhelado">Helado</label>
+                        <input type="radio" id="fembutido" name="fcomida" value="Helaoo" checked>
+                        <br>
+                         <!--checkbox
+                         
+                          SE PUEDE SELECCIONAR VARIOS
+                         
+                         -->
+                         <label for ="fc3">C3:</label>
+                         <input type="checkbox" if="fc3" name="fcoche1" value="c3">
+                         <label for ="fbmw">BMW:</label>
+                         <input type="checkbox" if="fc3" name="fbmw" value="BMW" selected>
+                         <br>
+                         <label for="fcoment">Comentario:</label>
+                         <textarea name="fcomnt" id="fcoment" cols="5" rows="5" placeholder="comentario" style="resize:none;"></textarea>
+                         <br>
+                         <br>
+                         <label for="fpais">Paises:</label>
+                         <!--
+                         
+                         multiple => dejara seleccionar más
+                         size ="2" => para que aparezca tipo un scrol
+                         -->
+                        <select name="pais" id="fpais"multiple>
+                            <option value="Francia">Francia</option>
+                            <option value="Alemania">Alemania</option>
+                            <option value="Holanda" selected>Holanda</option>
+                        </select>
+                    <!-- fieldset y legend,datalist => BUSCAR
+                        fieldsit y legend => agrupar info formulario
+                        datalist => lo mismo que un select pero a mayores deja insertar cosas, es un input
+                        y un select
+                    -->
+                        </form>
+
+                    <h1>Formulario Fran</h1>
                     <form id="formularioPrueba">
                         <label for="inputName">Nombre:</label>
                         <input  type="text" class="inputName">
@@ -305,8 +402,9 @@
                         <br>
                         <label for="submit">Enviar</label>
                         <input type="button" class="submit">
-
                     </form>
+
+                   
             </body>
-        
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit? Consequuntur ipsam aperiam doloribus voluptatibus inventore delectus autem, animi, ducimus maiores blanditiis architecto debitis facere! Delectus et in sit error!
 </html>
