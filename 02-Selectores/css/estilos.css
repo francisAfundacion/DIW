@@ -1,0 +1,79 @@
+/*TIPOS DE SELECTORES*/
+/*BÁSICOS*/
+    /*Universal
+        representa mediante *
+        Selecciona todos los elementos del html
+        Se suele emplear para borrar los margenes y rellenos
+        que por defecto tiene algunos elementos
+        padding => relleno interior
+        margin => espaciado exterior
+        */
+        *{
+            padding:0;
+            margin:0;
+        }
+        
+    /*Etiqueta elmento => p,h1,h2...
+    Todos los estilos se asocia a todas las eitquetas
+    de un tipo, comom por ejemplo si estilo a un elemento h2
+    ,todos tendrán ese estilo
+    
+    */
+    h1 { /*SELECTOR ETIQUETA*/
+        color:aquamarine;
+    }
+    p {
+        color:blue;
+    }
+    h1,h2 { /*SELECTOR ENCADENADO*/
+        text-align: center;
+    }
+    /*Encadenado/Agrupado
+    Se representa, mediante una (,)
+    Se usa cuando quiero aplicar los mismos estilos
+    a varios elementos.
+    por ejemplo h1 y h2 que tengan un estilo
+    */
+
+    /*De descendientes directos
+    Se representa con >
+    Selecciona hijos directos
+    */
+    div > a{
+        color:brown;
+    }
+    div > p {
+        color:green;
+    }
+    /*Descendientes
+    Selecciona a todos los descientes
+    Se representa con un espacio en blanco.
+    */
+    div p {
+        color:chocolate;
+        /*todos los div que tengan p 
+        les cambie los estilos (hijos,nietos...)*/
+    }
+    /*De clases
+        Se identifica como .Nombre clase
+    */
+    .contenedor > a {
+        font-size: 50px;
+    }
+    #cuerpo p {
+        /*SOLO SE DEBERÍA LLAMAR DESDE UN ELMENTO HTML
+        CON EL VALOR DEL ID EN CUESTIÓN*/
+        font-size:100px;
+    }
+    /*De identificadores
+         Se identifica como #Nombre clase
+           /*SOLO SE DEBERÍA LLAMAR DESDE UN ELMENTO HTML
+        CON EL VALOR DEL ID EN CUESTIÓN*/
+    
+    */
+
+
+/*COMBINADORES*/
+/*PSEUDOCLASES*/
+/*PSEUDOELEMENTOS*/
+/*DE ATRIBUTOS*/

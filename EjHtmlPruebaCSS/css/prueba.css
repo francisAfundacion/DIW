@@ -1,0 +1,32 @@
+
+header{
+    background-color: green;
+    color:white;
+    text-align: center;
+    font-family:sans-serif;
+}
+h3 {
+    color:green;
+    margin-left:5px;
+}
+span {
+   font-weight:bold;
+}
+section{
+    text-indent: 15px;
+    background-color: rgba(167, 161, 162, 0.637);
+}
+
+p,li{
+    margin-bottom: 20 px;
+    color: rgb(168, 53, 53);
+    text-shadow : 2px 3px 5px gray;
+}
+
+section > p > a{
+    text-decoration: dashed rgba(182, 64, 182, 0.7)  15px;
+}
+ul {
+    list-style:symbols()
+
+}

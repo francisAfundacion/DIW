@@ -1,0 +1,99 @@
+/*color
+Posibles valores :
+    - nombres
+    - codificaciones tipo hexadecimal,rgb
+    -con rgb tiene un cuarto valor que es la
+    -transparencia ( de 0 a 1) 
+    -la transparencia podriamos cojerlo también con
+    opacity.
+
+*/
+.color {
+    color:rgb(113, 59, 163,0.5);
+   /* color:rgb(113, 59, 163);*/
+}
+
+/*text-align
+valores 
+    -center
+    -left
+    -right
+    -justify
+*/
+.alineacion {
+    text-align: center;
+}
+
+/*vertical-align
+No es para todos los elementos
+se aplican sobre elementos en línea  dentro de elementos en bloque
+Tambien se usan en las tablas => para que los tds, estén alineados
+probar? metiendo imagen dentro de un parrafo
+
+*/
+.alineacion_vertical{
+
+}
+
+/*Subrayado
+text-decoration :propiedad abreviada
+Se divide en 4 propiedades:
+text-decoration-color:
+text-decoration-line: permite quitar subrayado por defecto a enlaces
+text-decoration-thickness:
+text-decoration-style => tipo de subrayado
+*/
+.subrayado{
+    /*todas estas se pueden abreviar en una
+    SOLO OBLIGATORIO EL TIPO DE LÍNEA text-decoration-line
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+    text-decoration-style:solid;
+    text-decoration-thickness: 2px => grosor;
+    */
+    /*no importa el orden =>
+    */
+    text-decoration:underline double 2px
+}
+
+/*transformación
+text-transform
+convierte el texto a letra capital,minuscula o mayusculas
+
+*/
+.transformacion {
+    text-transform: capitalize;
+}
+
+/*Sombra
+    text-shadow: px sombra horizontal, px sombra vertical,desenfoque y color
+
+*/
+.sombra{
+    /*Podemos poner todas las somrbas que queramos  enumerandolas mediante (,)*/
+    text-shadow: 2px 2px 5px gray, 2px 3px 5px red;
+}
+
+/*Espaciado
+    -podemos aplicarlo a:  
+        -letras
+        -texto
+        -lineas
+    propiedades
+    letter-spacing
+    word-spacing
+    text-indent
+    line-height
+*/
+.espaciado {
+    text-indent :20px; /*sangría*/
+    letter-spacing:10px;
+    line-height: 7px
+    word-spacing:15px;
+}
+
+/*fuente
+font-family
+font-size
+[...]
+*/
