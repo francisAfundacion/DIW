@@ -24,7 +24,7 @@ p,li{
 }
 
 section > p > a{
-    text-decoration: dashed rgba(182, 64, 182, 0.7)  15px;
+    text-decoration: underline double rgba(182, 64, 182, 0.7)  1px;
 }
 ul {
     list-style:symbols()

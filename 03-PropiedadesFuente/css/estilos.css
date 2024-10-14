@@ -1,0 +1,58 @@
+/*UNIDADES DE MEDIDA*/
+
+/* MEDIDAS ABSOLUTAS*/
+
+/*
+    => NO DEPENDEN DE NINGÚN ELEMENTO EXTERNO,COMO LA VENTANA, ALGÚN CONTENEDOR PADRE,ETC...
+    => SON FIJAS Y CTES, NO VARÍAN DE UN DISPOSITIVO A OTRO
+    => NO SE ENTIENDEN BIEN CON EL DISEÑO RESPONSIVE
+        (SEGÚN EL DISPOSITIVO QUE VEA MI PÁGINA QUE SE AJUSTE TANTO EN PCS, COMO EN MÓBIL)
+        px,pt(1,72),in,cm,nm.
+
+        px => espaciados, bordes...
+*/
+
+/*MEDIDAS RELATIVAS*/
+    /*              
+        SÍ DEPENDEN DE UN ELEMENTO EXTERNO (PODRÍA SER LA VENTANA 
+        O LA PANTALLA, ALGÚN CONTENEDOR 
+        EN EL QUE ETÁ INSERTADA,ELEMENTO PADRE...
+        
+        USO? => DISEÑO RESPONSIVE, EN LAS FUENTES
+
+        % => depende del tamaño del contenedor padre
+        em : ES PARA TAMAÑO DE FUENTE Y DEPENDE DEL ELEMENTO PADRE
+        rem: IGUAL QUE EM, PERO DEPENDE DEL ELEMENTOS RAÍZ, QUE ES HTML,sino indicamos nada, son 16px 
+        vh: (viewxheight) => DEPENDE DEL ANCHO Y ALTO DEL NAVEGADOR
+                SE USA EN FUENTES Y/O CONTENEDORES.
+        vw:vviewport width DEPENDE DE LA PANTALLA
+    
+    
+    */
+
+    html{
+        font-size:20px;
+    }
+    h1 {
+        font-size:1,5rem
+    }
+    p{
+        font-size:5vh;
+    }
+    .absoluto {
+        /*saldria el div del ancho de la pantalla, crea una barra horizontal*/
+        width:600px;
+        height:1000px;
+        background-color: brown;
+    }
+    body {
+        height : 100vh; //*altura de la pantalla*/
+    }
+    .relativo{
+        /*va creciendo a medida que ensanchamos pantalla  o se reduce a medida que achicamos la ventana*/
+        width:50%; /*me funciona en el ancho, pq el ancho total es el 100% que es la pantalla*/
+        height: 50%; /*No funcionaria con medidas relativas, pq no llega al 100% de alto, ya que depende
+        del contenido que vayas metiendo al doc.No tengo altura en el padre.Tendríamos que generarla en el padre*/
+        background-color: chocolate;
+    }
+

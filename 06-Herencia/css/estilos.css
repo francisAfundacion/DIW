@@ -1,0 +1,31 @@
+   /*HERENCIA EN CSS*/
+
+    /*
+    
+    */
+    body {
+        background-color: aquamarine; /*NO HERDABLE*/
+        font-family:'Courier New',Courier,monospace; /*HERDABLE*/
+        /*sino reconoce la primera, establecemos genericas, que el navegador reconoce casi siempre*/
+        color :red;
+        font-size:17px;
+        border: 2px solid black; /*propiedad abreviada, todas las propiedades compiladas en una => width,style,color     => NO HERDABLE*/
+
+    }
+    header {
+        /*ha heredado de body*/
+        /*hijos header heredaron de body*/
+        /*herdable*/
+        text-align:center;
+        color:blueviolet; /*prevalece esta propiedad que la del abuelo*/
+        border:2px dotted blue;
+    }
+h1 {
+    border:inherit; /*fuerza la herecia del padre*/
+    color :initial; /*RESTABLEZCA EL VALOR INICIAL QUE ES NEGRO*/
+
+}
+a{
+    color:inherit;
+    text-decoration:none;
+}
