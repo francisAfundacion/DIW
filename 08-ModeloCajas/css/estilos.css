@@ -1,0 +1,67 @@
+/*MODELO DE CAJAS*/
+
+/*
+ => LO SIGUE CUALQUIER ELEMENTO
+ =>FORMADA POR:
+
+    ANCHO:
+    MARGIN-left + border-left + padding-left+width + padding-right + border-right + margin-right
+    alto : MARGIN-top + border-top + padding-top+ height + padding-bottom + border-bottom + margin-bottom
+
+*/
+* {
+    padding:0;
+    margin:0;
+  /*  box-sizing:border-box; /*para que lo coja todos los elementos del html
+                                de modo que todos los elementos con width y height => SEA EL REAL
+                            */
+}
+.caja1,.caja2,.caja3 {
+    width:200px;
+    height: 100px;
+    border:3px solid black;
+    background-color: aqua;
+    padding:10px;
+    margin:10px;
+    /*va sumando y sumando y el tamaño del div es mayor de lo que habias dado en width*/
+    /*Si yo quiero que mida 200 px  usaremos box-sizing*/
+
+}
+.caja2{
+    box-sizing: border-box;
+    /*incluye en el ancho TOTAL Y LA ALTURA TOTAL que doy en el width , INCLUYE EL PADDING, BORDER Y CONTENIDO*/
+    /*NO INCLUYE EL MARGIN*/
+    /*SE SUELE PONER EN EL SELECTOR UNIVERSAL*/
+    /*EN CASO DE QUE NO QUERAMOS QUE COJA EL BORDER BOX CON SELECTOR UNIVERSAL, USAMOS EL PARÁMETRO INITIAL*/
+}
+
+
+
+/*CENTRAR VERTICALMENTE TEXTO EN UN CONTENEDOR
+    USAREMOS LINE-HEIGHT
+*/
+/*TENEMOS VER QUE ALTO TIENE EL CONTENEDOR , EN ESTE CASO 100 , ENTONCES LE DAMOS LINE-HEIGHT CON
+EL MISMO VALOR, PARA QUE BAJE ESA MISMA CANTIDAD/
+*/
+.caja3{
+    line-height:100px;
+    text-align:center;
+    /*CENTRAR HORIZONTALMENTE UN CONTENEDOR(ELEMENTO EN BLOQUE) CON MARGIN*/
+    margin: 0px auto; 
+    /*auto => aplica un amrgen de forma automática
+    0px => arriba y abajo
+     auto => divide margin left  y right a la mitad y la pone en la mitad
+    */  
+}
+.caja4 {
+    /*NO LO CENTRARÁ YA QUE OCUPA MÁS DEL 50% DE LA PANTALLA HORIZONTALMENTE*/
+    width:100%;
+    height:200px;
+    line-height:100px;
+    text-align:center;
+    margin: 0px auto;
+    border:2px solid black;
+}
+
+
+

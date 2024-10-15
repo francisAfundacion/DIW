@@ -1,0 +1,56 @@
+/*2. A partir la página web que se te proporciona (ejercicio2.html), debes escribir las reglas CSS
+necesarias para lograr una página web que tenga el mismo aspecto que la siguiente imagen:
+Los bordes que debes definir son:
+• Encabezado nivel 1: borde completo con una anchura de 2px, sólido y de color azul
+(#00F).
+• Encabezado nivel 2: borde completo con una anchura de 2px, sólido y de color gris
+(#AAA).
+• Listas: borde completo con una anchura de 2px, solido y de color verde (#0F0).
+En la siguiente imagen se indican las dimensiones que deben tener ciertas partes de la página
+• A: relleno izquierdo y derecho de 10px.
+• B: relleno de 10 px.
+• C: margen superior e inferior de 30px.
+• D: relleno de 5 px.
+• E: margen superior e inferior de 15px.
+• F: margen entre los elementos de la lista de 15 px.
+
+Puedes modificar el código HTML proporcionado para añadir los identificadores y clases que
+necesites.*/
+
+h1,h2,ul{
+    border-width:2px;
+    border-style: solid; 
+}
+h1 {
+    border-color: #00F;
+    padding: 10px;
+    margin:30px,0px;
+}
+h2{
+    border-color:#AAA;
+    margin:10px,0px;
+    
+}
+ul{
+    border-color:#0F0;
+    margin:opx, 10px;
+}
+li {
+    margin : 15px 0px;
+}
+
+ul > li.item1{
+    margin-top:0px;
+}
+ul >li.ultimoItem{
+    margin-bottom:0px;
+}
+    
+/*
+ul:first-child{
+    margin-top:0px;
+}
+ul:last-child{
+    margin-bottom:0px;
+}
+    */

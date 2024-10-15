@@ -1,0 +1,150 @@
+/*BORDER
+    border => propiedad abreviada, no importe
+    border :2px solid black
+    
+    Se descompone en :
+        border-color: nombre, codificación
+        border-style: solid,dotted,dashed,double,inset(Interior), outset(exterior),ridge
+        border-width: 2 px Emplearemos normalmente medidas absolutas(como por ejemplo px)
+    
+    4 bordes:
+        border-top:
+        border-bottom
+        border-left
+        border-right
+
+        border-radius => hace los bordes redondeados , propiedad abreviada
+        border-radius-top
+        border-radius-bottom
+        [...]     
+*/
+div.caja1 {
+    /*El ancho aunque no le asigenmos ninguna medida, ocupa el ancho de la pantalla, del 100% AL SER UN ELEMENTO EN BLOQUE*/
+    /*HABRIA QUE DAR LA ALTURa*/
+    height: 200px;;
+    width:200px;
+    border-bottom:2px ridge gold;
+    border-top: 3px inset pink;
+    border-left: 1px dotted green;
+    border-right:5px dashed rgb(99, 32, 161)
+}
+/*RELLENO PADDING
+=> propiedad abreviada
+=> normalmente px o %
+=> DESCOMPONE EN
+    padding-top: 
+    padding-left:
+    padding-right:
+    padding-bottom
+
+    DOS FORMAS
+        padding:20px (todos)
+        padding 10px 20px (Sup/inf der/izq)
+        padding:10px 5px 20px (sup der/izq inf)
+        padding 5px 10px 15px 20px (sup der inf izq)
+        padding: 0px 5px 10px 0px;
+
+        */
+* {
+    padding:0;
+    margin:0;
+    /*A TODOS LOS PADDING POR TODOS LOS LADOS SELES QUITA EL VALOR
+    POR DEFECTO */
+}
+div.caja2 {
+    background-color: brown;
+    width:300px;
+    height:100px;
+    border:2px solid pink;
+    padding-top:10px; /*RELLENO INTERNO*/
+    padding-bottom:20px; /*NO SE VEN BIEN, POR LA ALTURA DE LA CAJA*/
+    padding-left:5px;
+    padding-right:15px;
+    /*margin-top:20px; /*baja con respecto al de arriba*/
+    /*margin-left:20px;*/
+    margin : 20px 20px;
+    
+}
+div.caja2 > p {
+    /*p ocupa todo el ancho del padre*/
+border:1px solid black;
+padding:15px;
+
+
+}
+
+/*ESPACIO FUERA DEL BORDE => MARGIN
+=> propiedad abreviada
+=> normalmente px o %
+=> DESCOMPONE EN
+    margin-top: 
+    margin-left:
+    margin-right:
+    margin-bottom
+
+    DOS FORMAS
+        margin:20px (todos)
+        margin: 10px 20px (Sup/inf der/izq)
+        marging:10px 5px 20px (sup der/izq inf)
+        marging 5px 10px 15px 20px (sup der inf izq)
+        marging: 0px 5px 10px 0px;
+
+        *//*
+*/
+
+/*COLAPSO DE MÁRGENES
+dos caja => la primera margin bottom y a la segunda le damos margin top
+=> se queda con la cantidad mayor de las dos propiedades
+*/
+div.caja3 , div.caja4{
+    width:300px;
+    height:200px;
+    border:1px solid black;
+}
+div.caja3 {
+    /*margin-bottom:20px;*/
+    margin-bottom: 120;
+}
+div.caja4 {
+    margin-top:120px;
+    /*margin-top:20px;*/
+}
+
+/*ALTO Y ANCHO*/
+
+/*
+    NO HEREDABLE
+width:
+height:
+min-width
+max-width
+minx-height
+max-height
+
+Medidas abdosultas (pc,cm,pt...)
+Medidas relativas (%,cm rem,vh,vw,auto)
+inherit => FORZAR HERENCIa
+initial => Valor por defecto
+*/
+.caja5,.caja6,.caja7,.caja8{
+    background-color: blueviolet;
+    border:2px solid red;
+    height:100px;
+    /*como no le hemos dado un ancho, coge toda la pantalla
+    Y ES RESPONSIVE*/
+}
+/*Se genera una barra de desplazamiento horizontal*/
+.caja5{
+    width:600px;
+}
+
+/*si el dispositivo es menor de 600 se adapta al ancho total de la pantalla*/
+.caja6,caja7 {
+    max-width: 600px;;
+}
+
+/*como tenía un ancho mínimo, no puede bajar de él, entonces va a acabar generando
+una barra de desplazamiento en cierto punto al ir reduciendo la ventana, cambiar de dispositivo...*/
+.caja8 {
+    min-width: 600px;
+}
