@@ -17,9 +17,12 @@ En la siguiente imagen se indican las dimensiones que deben tener ciertas partes
 Puedes modificar el código HTML proporcionado para añadir los identificadores y clases que
 necesites.*/
 
+/*A NO SE CORRESPONDE PQ NO ES PADDING, HAY UNA ERRATA, YO DECIDÍ ASIGNAR UN MARGIN-LEFT, que supuse que es lo que se podría
+referir.*/
 h1,h2,ul{
     border-width:2px;
     border-style: solid; 
+    margin-left:10px;
 }
 h1 {
     border-color: #00F;
@@ -33,7 +36,6 @@ h2{
 }
 ul{
     border-color:#0F0;
-    margin:opx, 10px;
 }
 li {
     margin : 15px 0px;
