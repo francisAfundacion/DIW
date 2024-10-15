@@ -12,11 +12,7 @@ automáticamente, relleno a los cuatro lados de 50px y la fuente en cursiva.
 cuatro lados de 10px, texto justificado y un interlineado de 30px.
 • Para el cuarto párrafo: anchura del 75%, borde superior de 3px solido y color #f0377b.
 */
-* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
+
 p.primero , p.segundo{
     width:500px;
     font-weight: bold;
