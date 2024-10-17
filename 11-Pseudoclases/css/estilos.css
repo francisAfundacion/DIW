@@ -1,0 +1,81 @@
+/*CAMBIAR ESTILOS A LOS ESTADOS DEL ENLACE*/
+
+a:link {
+    color:black;
+    font-size:40px;
+}
+
+a:visited{
+    color :aquamarine;
+    font-size:80px;
+}
+
+a:hover{
+    color:coral;
+    font-size:5px;
+}
+
+a:active {
+    color:chartreuse;
+    font-size:150px;
+}
+
+#caja {
+    width:200px;
+    height: 200px;
+    background-color: aqua;
+}
+/*PUEDO combinar identificadores/clases con pseudoclases*/
+#caja:hover {
+    background-color: coral;
+    height:400px;
+}
+/*pseudoclases lista*/
+#list li:first-child {
+    font-weight: bold;
+    font-size:60px;
+}
+#list li:last-child{
+
+}
+
+/*identico al anterior*/
+#list li:last-of-type{
+    font-size:40px;
+    color:Pink;
+    text-decoration: underline overline solid brown;
+}
+#llst li:nth-child(3){
+    background-color: blueviolet;
+}
+#list li:nth-child(1):hover{
+    background-color: yellow;
+}
+/*pregunta que al hacer hover sobre ella, muestre la respuesta correcta*/
+/*+ li para que me coga el  hermano siguiente de p que contiene la pregunta*/
+.pregunta_respuesta > p:hover + li{
+    background-color: green;
+    width:5%
+   
+}
+
+
+/*pseudoclases en formularios*/
+
+/*focus => cuando clickas sobre la entrada*/
+#fnom:focus { 
+    size: 120px;
+    background: green;
+    border:2px solid purple;
+}
+/*required*/
+#fnom:required{
+    border:2px solid yellow;
+    border-radius:5px;
+}
+#fnom:disabled{
+    background-color: grey;
+    color:white;
+}
+
+

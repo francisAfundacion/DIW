@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PSEUDOCLASE</h1>
+    <h2>DAN ESTILOS A LOS DISTINTOS ESTADOS DE LOS ELEMENTOS</h2>
+    <p>Se represeta con selector : nombre_pseudoclase.Ejemplo: <br> div:hover</p>
+    <a href="https://www.w3schools.com/cssref/css_ref_pseudo_classes.php">Link a todas als pseudoclases</a>
+    <p>Usos:</p>
+    <ul>
+        <li>Para cambiar los estados de los enlaces</li>
+            <ol>
+                <li>No visitado => :link</li>
+                <li>Visitado => :visited</li>
+                <li>Activado => :activo (click sin soltar)</li>
+                <li>pasar el puntero por encima => :hover</li>
+                <li>TIENE QUE CUMPLIR ESTE ORDEN AL DAR LOS VALORES A ESTAS PSEUDOCLASES</li>
+            </ol>
+        <li>Para cambiar estados de los estados de los items de las listas :</li>
+            <ol id="list">
+                <li>first:child</li>
+                <li>last-child</li>
+                <li>only-child</li>
+                <li>nth-child(3)</li>
+            </ol>
+        <li>Para cambiar estados de los formularios</li>
+            <oL>
+                <li>:focus => cambia estilos formularios, cuando tiene el foco la entrada concreta</li>
+                <li>:required =></li>
+                <li>:disabled</li>
+            </oL>
+        <li>Para cambiar estados de las filas y columnas de las tablas</li>
+    </ul>
+    <div id="caja">
+
+    </div>
+    <ul class ="pregunta_respuesta">
+        <p class="Pregunta">La sangre es de <span>color?</span></p>
+        <li>rojo</li>
+        <li>verde</li>
+        <li>amarillo</li>
+    </ul>
+    <form action="pagina.php" method="get">
+        <label for = "fnom" >Nombre</label>
+        <input required type="text" size="50" placeholder="Tu nombre" id="fnom" name="fnom">
+        <label  for = "fapeE">Apellido</label>
+        <input  disabled type="text" size="50" placeholder="Tu apellido" id="fape" name="fape">
+        <input type="submit" value="enviar">
+    </form>
+    </form>
+</body>
+</html>

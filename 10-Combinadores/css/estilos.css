@@ -1,0 +1,35 @@
+/*COMBINADORES =>relaciona varios selectores simples.
+*/
+
+/*COMBINADOR DE DESCENDIENTES(ESPACIO EN BLANCO)*/
+
+/*PINTA P2-P7*/
+div p {
+    color:red;
+}
+
+/*PINTA P2-P7*/
+/*COMBINADOR DE DESCENDIENTES DIRECTOS (>)*/
+div > p {
+    color:green;
+}
+
+/*COMBINADOR DE HERMANO SIGUIENTE (+)*/
+/*P6,P7,P8*/
+/*hermano siguiente de div*/
+div + p {
+    color:purple;
+}
+
+/*COMBINADOR DE HERMANOS SIGUIENTES (~)*/
+/*P6-P9*/
+div ~ p {
+    color:blue;
+}
+
+/*se pueden combinar más de dos selectores*/
+/*P3*/
+/*p6 no lo pinta pq el hermano siguiente es un div, en vez un p(ESTE SERÍA EL SIGUIENTE DEL SIGUIENTE*/
+div > p + p {
+    color:aqua
+}
