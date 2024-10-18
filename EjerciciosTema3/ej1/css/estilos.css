@@ -1,0 +1,39 @@
+body{
+    font-size:40px;
+}
+table {
+    margin:auto;
+}
+table ,td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+/*colorear letras de las celdas*/
+
+tr:first-child{
+    color:red;
+}
+
+tr:nth-child(2){
+    color:blue;
+}
+tr:nth-child(3){
+    color:green;
+}
+tr:nth-child(4){
+    color: orange;
+}
+tr:last-child(5){
+    color: purple;
+}
+/*colorear background*/
+tr>td:nth-child(2){
+    color: yellow;
+}
+tr>td:nth-child(3){
+    color: pink;
+}
+tr >td:last-child{
+    color:grey;
+}

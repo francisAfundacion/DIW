@@ -1,7 +1,7 @@
 /*COMBINADORES =>relaciona varios selectores simples.
 */
 
-/*COMBINADOR DE DESCENDIENTES(ESPACIO EN BLANCO)*/
+/*COMBINADOR DE DESCENDIENTES(ESPACIO EN BLANCO) => neietos  ,bisnietos ...*/
 
 /*PINTA P2-P7*/
 div p {
@@ -31,5 +31,5 @@ div ~ p {
 /*P3*/
 /*p6 no lo pinta pq el hermano siguiente es un div, en vez un p(ESTE SERÍA EL SIGUIENTE DEL SIGUIENTE*/
 div > p + p {
-    color:aqua
+    color:aqua;
 }
