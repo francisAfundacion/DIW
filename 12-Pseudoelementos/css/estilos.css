@@ -1,0 +1,45 @@
+/*puede ser útil para animaciones como por ejemplo*/
+h1::before{
+    content: "antes del h1";
+    color:red;
+}
+h1::after{
+    content:"después del h1";
+    color:green;
+}
+
+/*cAMBIAMOS el estilo de placeholder cuando
+el input tenga el foco*/
+/*focus::*/
+
+#fnom:focus::placeholder{
+    color:red;
+}
+
+/*selection*/
+.seleccionado::selection {
+    background-color: pink;
+    color: purple;
+    font-weight: bold;
+}
+
+/*::marker*/
+/*
+problema del child => hay dos ul, pero esas dos no están seguidas,tienen que estar seguidos y ser hermanos
+*/
+/*lo que hace lo mismo es nth-of-type , te salta los hermanos de por medio y te coge directamente el segundo del tipo
+especificado*/
+
+ul:nth-of-type(2) li::marker{
+    color:yellow;
+    font-size:20px;
+}
+
+.seleccionado::first-letter{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:brown;
+}
+.seleccionado::first-line{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:green;
+}
