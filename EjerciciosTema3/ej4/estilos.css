@@ -1,0 +1,34 @@
+/*
+4. Utilizando pseudoclases crea una tabla como la que se muestra con las especificaciones: la
+tabla tiene ancho 50%, los encabezados tienen 70px de alto, alineación vertical centrada,
+fondo sienna, texto cornsilk en negrita. Las filas pares tendrán color de fondo cornsilk y las
+impares darksalmon. Cuando se pasa el mouse por encima de las filas éstas tendrán un color
+de fondo sienna y color de texto blanco.
+
+*/
+
+table {
+    width:50%;
+}
+table,td,th{
+    border: 2px black solid;
+    border-collapse: collapse;
+}
+tr:nth-of-type(1) > th{
+    height:70px;
+    vertical-align: auto;
+    color:cornsilk;
+    font-weight: bold;
+    background-color: sienna;
+}
+tr:nth-of-type(even) td {
+    background-color: cornsilk;
+}
+tr:nth-of-type(odd) td {
+    background-color: darksalmon;
+}
+
+tr:hover{
+    background-color: sienna;
+    color:white;
+}
