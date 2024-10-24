@@ -1,0 +1,73 @@
+/*PROPIEDADES DE LAS LISTAS*/
+/*diferentes tipo para ordenada y desordenada*/
+/*list-style-type, cambia la viñeta*/
+*{
+    margin:0;
+    padding:0;
+}
+/*MUCHAS VECES INTERESA QUITAR VIÑETAS CON LIST-STYLE-TYPE:NONE
+PARA PODER EMPLEAR LA LISTA COMO MENÚ DE NAVEGACIÓN*/
+ul{
+    /*list-style-type:square;*/
+   /* list-style-position:inside;*/
+    /*list-style-image:url();*/
+    list-style: square inside;
+}
+/*quitar margin y padding y al poner outside desaparecerá la viñeta*/
+ol{
+    /*Cambia viñeta*/
+    list-style-type:lower-roman;
+    /*posicion viñeta*/
+    /*list-style-position:outside;*/
+    /*pone imagen como viñeta*/
+    list-style-image:url() ;
+    /*prevalece imagen que square*/
+    list-style: square inside url('user.png');
+
+}
+/*list-style-position => outside o inside (mueve la viñeta)*/
+
+/*list-style.image*/
+/*como dar a mi lista a los elementos pares o impares*/
+/*even => pares
+odd  => immpares*/
+
+ul li:nth-child(even):hover{
+    background-color: green;
+    color:red;
+}
+ul li:nth-child(odd):hover{
+    color:yellow;
+    background-color: brown;
+}
+/*PROPIEDADES DE LAS TABLAS:border-collapse,border,margin,text-align
+vertical-align , border-collapse(unifica borde)*/
+/*vertical align => una imagen dentro de una imagen en bloque
+ o en las tablas, tiene que haber altura pero con height NO CON PADDING*/
+table {
+    margin:auto;
+    /*margin 0 auto => primero inferior y superior y segundo (izquierda y derecha)*/
+    width:400px;
+    border:2px solid black;
+    border-collapse:collapse;
+}
+td,th{
+    border: 2px solid black;
+    height:100px;
+    vertical-align: bottom; /*tengo una altura generada*/
+}
+
+/*pinatr cabecera de un color*/
+tr > th {
+    background-color: blue;
+    /*prevalece pq es más especifico*/
+}
+tr:nth-child(even){
+    background-color: grey;
+}
+tr:nth-child(odd){
+    background-color: rgb(175, 172, 172);
+}
+
+
+

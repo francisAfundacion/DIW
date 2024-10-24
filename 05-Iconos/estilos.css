@@ -1,0 +1,56 @@
+
+/*El script lo copiamos en head y lo hallamos en your kits*/
+/*En body insertamos el html de <i> reference al icono*
+/*SE DÁ ESTILOS COMO SI FUERA UN TEXTO*/
+i{
+font-size:40px;
+color: blue;
+}
+/*EN GOOGLE FONTS COPIAR CODIGO CSS
+COPIAR LINK SCRIPT EN HEAD
+*/
+.kablammo-uniquifier {
+    font-family: "Kablammo", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 0;
+  }
+  /*PROPIEDADES DEL FONDO*/
+  /*background-color => NO ES HEREDABLE,
+         background-image
+         background-repeat
+         background-position
+         background-attachment   => si ponemos imagen de fondo y hacemos scrol
+                                    si está fija o se mueve con nosotros
+  */
+  /* Tenia un div con esta clase, pero no originaba la imagen  */
+
+  //*en un contenedor */
+  .background_imagen {
+    background-image:url('img/aj2.jpeg');
+    background-position:right top;
+    background-repeat:repeat-y;
+    background-size:120px 200px;;
+    width:200px;
+    height:400px;
+  }
+
+/*
+  body{
+    background-image:url('img/aj2.jpeg');
+    background-repeat:no-repeat;
+    background-size: 100px 100px; /*ancho x alto*/
+    /*background-position: right top;*/
+    /*si lo centramos tal como está no se centrará bine ya que no
+    le hemos dado altura*/
+    height:1500px;
+    background-position: center center /*x e y*/;
+    background-attachment: scroll;
+    /*cover => toda la imagen cubre el fondo de la pantalla*/
+    /*contain =>*/
+
+    
+  }
+    

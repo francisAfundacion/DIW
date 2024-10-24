@@ -1,0 +1,46 @@
+/*Display*/
+/*POSIBLE PREGUNTA EXAMEN => display/
+
+
+/*hover primer p, se muestre el seguno*/
+
+.seve{
+    border:2px solid black;
+    width:300px;
+}
+.noseve{
+   /* display:none; además elimnina el espacio que  ocupa ese elemento*/
+    visibility: hidden;
+}
+.seve:hover + p {
+   /* display:block;*/
+   visibility: visible;
+}
+span{
+    display:block;
+    background-color: aquamarine;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+a{
+    /*OJO CON LA AREA CLICKABLE HAY QUE CONTROLAR EL ANCHO*/
+    display:block;
+    margin:20px 0px;
+}
+
+a:hover{
+    font-weight: 900;
+}
+
+/*No podemos darle tamaño ahora ocupa, acorde al contenido
+que tenga asociado cada elemento*/
+/*cuando hay mucho meten los que quepan en el ancho y lyuego continua en la siguiente linea*/
+.caja1,.caja2,.caja3{
+    /*  en INLINE NO PODIA DAR TAMAÑO*/
+    /*height:100px;*/
+    width:200px;
+    border:2px solid black;
+   /* display:inline;*/
+   display:inline-block;
+}

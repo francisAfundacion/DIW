@@ -1,0 +1,58 @@
+/*OVERFLOW*/
+/*CONTROLA EL DESBORDAMIENTO
+SI CONTENIDO > CONTENEDOR*/
+/*
+overflow : propiedad abreviada
+overflow-x: desbordamiento x
+overflow-y: desbordamiento y
+SE PUEDE APLICAR A CUALQUIER ELEMENTO
+    VALORES:
+        hidden => esconde el desbordamiento, no se ve
+        por defecto: visible(ver lo que se desborda)
+    auto => de forma automatica si el contenido desborda, pone
+        barra de desplazamiento dónde sea necesario
+        scrol;
+
+*/
+
+/*como el contenedor es mas pequeño que el contenido,en consecuencia
+se sobresaldrá del cotenedor*/
+div {
+    width:100px;
+    height:100px;
+    border:2px solid black;
+    /*overflow: :visible;*/
+    margin-bottom: 30px;;
+}
+.visible {
+    overflow:visible; /*por defecto*/
+    background-color: aquamarine;
+}
+ .escondido{
+    background-color: green;
+    overflow:hidden;
+    /**/
+ }
+
+ .auto {
+    /*se genera las barras de forma automática*/
+    overflow:auto;
+    background-color: yellow;
+ }
+ .scrol {
+    /*le indico que se genere la barra de desplazamiento*/
+    background-color: brown;
+    overflow:scroll;
+ }
+
+ .caja {
+
+    width:40px;
+    height:400px;
+    background-color: blue;
+    /*overflow-x: scroll;*/
+    overflow-wrap:break-word;
+    /*permite cortar palabras para que coja en el contenedor*/
+
+
+ }

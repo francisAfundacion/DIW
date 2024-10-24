@@ -1,0 +1,42 @@
+ div p {background-color:pink;}
+ /*Coge todos los descendientes  p de div sean hijos, nietos...*/
+ /*Por lo que en  este caso cogería los siguientes elementos::after
+    Párrafo 1
+    Párrafo 2
+    Párrafo 3
+    Párrafo 4
+    Párrafo 7
+    Párrafo 8
+    Párrafo 9
+    Párrafo 10
+    Párrafo 11
+ */
+
+ div > p {background-color:pink;}
+ /*Coge todos los descendientes directos que sean p de los elementos tipo div.
+    Por lo que se aplicaría a  los siguientes elementos
+        Párrafo 1
+        Párrafo 2
+        Párrafo 4
+        Párrafo 7
+        Párrafo 8
+        Párrafo 9
+        Párrafo 10
+*/
+ div + p {background-color:pink;}
+ /*Coge el hermano siguiente de div , siempre y cuando sea p
+     Por lo que se aplicaría a  los siguientes elementos
+        Párrafo 5
+        Párrafo 10
+        Párrafo 11
+ 
+ 
+ */
+ div ~ p {background-color:pink;}
+ /*Coge todos los hermanos siguientes  de div , siempre y cuando sean p.
+   Por lo que se aplicaría a  los siguientes elementos
+        Párrafo 5
+        Párrafo 6
+        Párrafo 10
+        Párrafo 11
+        */

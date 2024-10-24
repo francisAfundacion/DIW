@@ -29,11 +29,11 @@ tr:last-child(5){
 }
 /*colorear background*/
 tr>td:nth-child(2){
-    color: yellow;
+    background-color: yellow;
 }
 tr>td:nth-child(3){
-    color: pink;
+    background-color: pink;
 }
 tr >td:last-child{
-    color:grey;
+    background-color:grey;
 }
