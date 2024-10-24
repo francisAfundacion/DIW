@@ -1,0 +1,6 @@
+/*
+3. Utilizando pseudoclases crea una lista con los siguientes estilos: el primer elemento de la lista
+(15pt, blueviolet,bolder), el último elemento de la lista (25pt, cadetblue, subrayado sólido
+cadetblue) y si la lista tiene un único elemento (30pt, y sombra de 2px salmon)
+*/
+ul::nth-of-type(2)
