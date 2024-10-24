@@ -3,4 +3,18 @@
 (15pt, blueviolet,bolder), el último elemento de la lista (25pt, cadetblue, subrayado sólido
 cadetblue) y si la lista tiene un único elemento (30pt, y sombra de 2px salmon)
 */
-ul::nth-of-type(2)
+ul:nth-of-type(1)>li:first-child{
+    font-size:15pt;
+    color:blueviolet;
+    font-weight:bolder;
+}
+ul:nth-of-type(1)>li:last-child{
+    font-size:25pt;
+    color:cadetblue;
+    text-decoration: 2px underline solid;
+}
+ul:nth-of-type(2)>li:only-child{
+    font-size: 30pt;
+    text-shadow:2px 2px 2px salmon;
+}
+
