@@ -29,6 +29,6 @@ tr:nth-of-type(odd) td {
 }
 
 tr:hover{
-    background-color: sienna;
+    background-color:sienna;
     color:white;
 }

@@ -1,0 +1,67 @@
+/*
+Se suele hacer
+listas
+contenedores
+NO CON TABLAS
+*/
+/*HAY QUE IDENTIFICAR CUAL ENLACE ESTÁ ACTIVO*/
+/*POR LO QUE DEBERÍA HABER TANTOS HTML con class activo como tantas páginas
+*/
+
+*{
+    /*quita espacio interior y exterior que los elementos tengan por defecto*/
+    margin:0;
+    padding:0;
+    box-sizing:border-box;/*ancho y alto real = contenido + borde +padding .EL AMRGIN NO ESTÁ INCLUIDO*/
+    /*BUENA PRÁCTICA PONERLO AL PRINCIPIO BOX-SIZING*/
+}
+
+ul{ /*elemento en bloque*/
+    /*quitar viñetas*/
+    background-color: lightgray;
+    list-style-type: none;
+    text-align:center;
+}
+
+.vertical{
+    width:200px;
+}
+.vertical > li > a{
+    text-decoration: none;
+    padding:16px 0px;
+    display:block; /*para que a futuro cuando hagamos hover aparezca todo lo que ocupa su padre
+                    en vez  solo la del contenido del propio enlace(ya que su naturaleza es de un elemento 
+                    en línea*/
+}
+
+/*los a que no tengan la clase activo se le asigna estas propiedades*/
+.vertical li a:hover:not(.activo){
+    background-color: orange;
+    border-bottom: 1px solid black;
+}
+
+.vertical li a.activo{
+    background-color: skyblue;
+    color:orange;
+}
+
+/*HORIZONTAL*/
+.horizontal li {
+    display:inline-block;
+}
+
+.horizontal li a{
+    text-decoration: none;
+    padding:10px 20px;
+    display: inline-block;    
+}
+.horizontal > li > a:hover:not(.activo){
+    background-color: orange;
+    font-weight: 900;
+    border-bottom: 1px solid black;
+}
+.horizontal li a.activo{
+    background-color: lightskyblue;
+     color:orange;
+}
+
