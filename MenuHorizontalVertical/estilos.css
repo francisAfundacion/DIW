@@ -1,0 +1,40 @@
+
+*{
+    /*quita espacio interior y exterior que los elementos tengan por defecto*/
+    margin:0;
+    padding:0;
+    box-sizing:border-box;/*ancho y alto real = contenido + borde +padding .EL AMRGIN NO ESTÁ INCLUIDO*/
+    /*BUENA PRÁCTICA PONERLO AL PRINCIPIO BOX-SIZING*/
+}
+
+ul{ /*elemento en bloque*/
+    /*quitar viñetas*/
+    list-style-type: none;
+    text-align:center;
+}
+
+.vertical{
+    width:200px;
+}
+.vertical > li > a{
+    text-decoration: none;
+    padding:16px 0px;
+    display:block; /*para que a futuro cuando hagamos hover aparezca todo lo que ocupa su padre
+                    en vez  solo la del contenido del propio enlace(ya que su naturaleza es de un elemento 
+                    en línea*/
+    background-image: url ('');
+}
+
+/*
+background-image:url('img/aj2.jpeg');
+background-repeat:no-repeat;
+background-size: 100px 100px; /*ancho x alto*/
+/*background-position: right top;*/
+/*si lo centramos tal como está no se centrará bine ya que no
+le hemos dado altura*/
+/*height:1500px;
+background-position: center center /*x e y*/;
+/*background-attachment: scroll;
+/*cover => toda la imagen cubre el fondo de la pantalla*/
+/*contain =>*/
+
