@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+        <h1>POSITION</h1>
+        <p>Permite posicionar elementos html en cualquier lugar de la pantalla.</p>
+        <p>Valores position</p>
+        <ul>
+            <li>static => es el valor por defecto,Los elementos siguen el flujo de colocación que tienen que seguir por su naturaleza de tipo de elemento.</li>
+            <li>absolute => se puede mover, pero no desde su posición del flujo normal.
+                <p>Hay que comprobar si tiene padre y si este padre está posicionado(que tiene un valor de position cualquier, distinto de static)
+
+                </p>
+                <p>Si tiene padre, se mueve dentro de padre</p>
+                <p>Si no tiene padre o no está posicionado, se mueve en relación a la pantalla</p>
+                <p>Tambien se mueve  con las propiedades top,bottom,left y right.
+                </p>
+                <P>en absolute no deja hueco AL MOVER EL ELEMENTO</P>
+            </li>
+            <li>relative => se puede mover.Se mueve desde su posición en el flujo normal.
+            <p>Como se mueve? con las propiedades top,bottom,right,bottom.
+                Cuándo movemos el elemento queda el hueco o no? => SI LO DEJA
+            </p>
+          </li>
+            <li>Ffixed,se puede mover con top, bottom,left,right.Se mueve en relación a la pantalla y de donde lo movamos se queda fijo.
+               <p>Aunque hagamos scrol, el elemento se queda en el lugar especificado</p>
+                <p> Deja hueco al mover el elemento? NO DEJA HUECO</p>
+            </li>
+            <li>
+                <p>Se comporta como relative y fixed.</p>
+                <p>Inicialmente ocupa su pos normal.</p>
+                <p>  relative => mientras no lleguemos con scrol a la posición determinada especificado con top,bottom,right.</p>
+                <p>  fixed => cuando lleguemos a esos valores se fijará en los valores que le digamos</p>
+                <p>Típico de menús</p>
+            </li>
+        </ul>
+        <div class="ejemplos">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non nam culpa eligendi aperiam placeat expedita facere quidem, incidunt possimus iusto maiores odit mollitia, quod sapiente saepe officiis dolor temporibus nobis!</p>
+            <div class="estatico"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, accusantium dolorum suscipit adipisci a quod aliquam omnis quam accusamus atque officiis distinctio aliquid neque nostrum animi. Sunt tenetur vel unde.</p>
+            <div class="relativo"></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed voluptatum dolorum sint error odio repudiandae consequatur ex enim, esse quos nulla soluta, vitae iusto assumenda sequi dolorem iste temporibus aspernatur.</p>
+            <div class="absoluto">
+                <div class="hijo"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, voluptate! Consequuntur, ducimus quia iure exercitationem doloribus incidunt. Veritatis provident repudiandae dicta expedita fugiat similique aliquam! Vitae, ad? Alias, nobis nihil.</p>
+            <div class="fijo"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem assumenda eos veniam impedit! Quam adipisci placeat necessitatibus vero aliquid cum pariatur harum, totam, ad, provident blanditiis? Eaque cum corporis minus.</p>
+            <div class="pegajoso">ESTE ES EL MENÚ PEGAJOSO</div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam ex in sunt facere, distinctio perferendis quis illum maiores libero laborum laboriosam accusamus eos accusantium magnam illo quae nihil sed enim.
+            Fuga nisi magni voluptates veniam illo laborum maiores optio totam! Ipsa soluta dolores alias aperiam porro, autem voluptatibus quia labore laborum repudiandae molestias amet, iusto quaerat odit est vel quisquam!
+            Rem ipsa placeat, facilis sit blanditiis optio corrupti libero laudantium ad repellat excepturi atque eum fuga maiores illo laboriosam? Rem quaerat excepturi suscipit, voluptatum pariatur repellendus dolore aliquam repudiandae earum?
+            Neque maxime repudiandae distinctio eius nisi explicabo impedit consequuntur veniam obcaecati. Consectetur ad eum ducimus magnam, voluptates perspiciatis quod eius repudiandae veritatis, ipsa molestias animi. Doloremque provident quasi culpa inventore?
+            Sapiente amet enim animi earum consequuntur quas similique quod tempora excepturi? Eos corporis, consequatur doloribus consequuntur magnam laborum nulla, vero quisquam aut mollitia, quaerat possimus doloremque esse excepturi nihil sunt.
+            Dignissimos itaque pariatur, corrupti dicta tempora aliquam ea dolore cumque aliquid similique soluta mollitia quam. Laboriosam officiis assumenda et nemo ratione sequi, dignissimos earum quis aliquam officia iste dolore pariatur?
+            Velit fugit asperiores voluptas eos, officia consectetur ad deleniti dicta culpa corrupti beatae voluptatum aut, ex harum rerum omnis cum consequuntur qui, nihil libero ipsa dolorem natus maxime. Nostrum, natus?
+            Architecto fugit, quas est quasi autem quibusdam commodi, repellendus eligendi accusantium maiores et? Magni autem vel a officiis, quidem assumenda in aliquam reprehenderit saepe. Dolores aliquam perspiciatis minima esse corporis.
+            Vero quia labore perspiciatis earum. Sapiente placeat dignissimos culpa, unde magni cum fugit voluptatem consequuntur accusantium nihil minus sed ab officia rerum quibusdam necessitatibus ipsa sint veniam iste eveniet accusamus?
+            Nesciunt voluptates sequi necessitatibus perspiciatis magni repudiandae vero doloribus ex. Commodi enim, nisi ratione reprehenderit culpa sunt repellat veritatis quia harum, vitae hic velit adipisci iure vel laborum voluptates saepe?
+            Eligendi vel perspiciatis repellat, maiores consectetur architecto quisquam ab explicabo magni cum ipsa molestiae accusamus labore tenetur quia autem porro sed veniam in eaque asperiores assumenda. Eaque nesciunt beatae dolorem?
+            Exercitationem molestiae velit quis commodi ab dolorem, molestias culpa consectetur ea ullam fuga delectus non, officia quae aspernatur quidem error vero nisi, sint facilis distinctio illo? Commodi voluptatum nostrum blanditiis.
+            Inventore facilis, adipisci sequi exercitationem a incidunt porro est praesentium magni reiciendis pariatur voluptas unde perferendis corrupti! Quia, nostrum officiis id blanditiis veniam, rem beatae quam dolor ab cum voluptate.
+            Alias, ratione dolor molestiae cupiditate maxime incidunt expedita odit architecto placeat blanditiis velit nisi illum, amet quidem voluptate fuga est iure labore dolore quisquam natus. Sunt cumque harum fugiat officiis?
+            Laboriosam nemo in fugit ea consectetur. Accusantium similique dicta obcaecati, quos dolore autem necessitatibus provident expedita veniam maxime deserunt, id eveniet eaque ut architecto harum ipsam. Et reiciendis accusantium quibusdam!</p>
+    </div>
+    </body>
+</html>

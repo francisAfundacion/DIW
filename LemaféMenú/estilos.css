@@ -3,34 +3,98 @@
     padding:0;
     box-sizing: border-box;
 }
+.new-rocker-regular {
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
 body{
-    color:white;
+    text-align:center;
+    background-color: #E9D6B8;
 }
-
 /*comunes a ambas listas*/
-ul > li > a {
-   background-image: url('img/tazaopcion.jpg');
-   background-repeat:no-repeat;
-   background-position-y:center;
-   background-position-x:center;
-   background-size:contain;
-   line-height: 85px;
-   text-align:center;
+ul{
+    list-style:none;
+    display:block;
+    filter: brightness(0.7) contrast(1.2);
 }
-/*dimensiones li  comunes*/
+ul li a{
+    color:white;
+    
+}
 ul > li {
-    width:30px;
-    height:35px;
+    width:70px;
+    height:45px; /*cambiará según el line-height*/
+    background-image: url('img/tazaopcion.jpg');
+    background-repeat:no-repeat;
+    background-position-y:center;
+    background-position-x:center;
+    background-size:contain;
+    line-height: 85px;
+
 }
+/*----------------------------------------------------Lista Vertical------------------------------------------------------*/
 ul.vertical > li > a{
     display:block;
 }
+ul.vertical> li > a:hover(.activo) {
+    display:block;
+    filter: brightness(0.7) contrast(1.2);
+ }
+ul.vertical> li > a:not(.activo) {
+    display:block;
+    filter: brightness(0.7) contrast(1.2);
+ }
+ ul.vertical > li > a:hover:not(.activo){
+    color:rgb(226, 142, 74);
+    font-size: 20px;
+    width: 90px;
 
-/*horizontal*/
-ul.horizontal > li > a{
-    display:inline-block; 
 }
+ul.vertical > li > a.activo{
+    display:block;
+    line-height: 85px;
+    filter: brightness(0.7) contrast(1.2);
+}
+ul.vertical > li > a.activo:hover{
+    color:rgb(226, 142, 74);
+    font-size: 20px;
+    filter: brightness(0.9) contrast(1.2);
+    width: 90px;
+}
+ul.vertical > li{
+    margin: 42px 0px;
+}
+
+/*--------------------------------------horizontal => con float---------------------------------------------------------*/
+
+ul.horizontal{
+    margin:20px 20px;
+}
+
 ul.horizontal > li {
-    display:inline-block;  
+    float:left;
+    margin:0px 5px;
+    /*como line-height de a de 85 al no darle height ,ocupará acorde al contenido*/
+}
+    
+ul.horizontal > li > a.activo:hover{
+    color:rgb(226, 142, 74);
+    font-size: 20px;
+    filter: brightness(0.9) contrast(1.2);
+    width: 90px;
+}
+ul.horizontal > li > a:not(.activo){
+    filter: brightness(0.7) contrast(1.2);
+
 }
 
+ul.horizontal > li > a:hover:not(.activo){
+    color:rgb(226, 142, 74);
+    font-size: 20px;
+    width: 90px;
+
+}
+
+
+  

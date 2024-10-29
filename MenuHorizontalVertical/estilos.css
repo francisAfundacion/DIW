@@ -36,5 +36,23 @@ le hemos dado altura*/
 background-position: center center /*x e y*/;
 /*background-attachment: scroll;
 /*cover => toda la imagen cubre el fondo de la pantalla*/
-/*contain =>*/
+/*contain =>
+se utiliza para escalar la imagen de fondo de manera que se ajuste completamente dentro del área del elemento
+ sin distorsionar su proporción original.
+  Esto significa que la imagen se redimensionará para que su ancho o alto se ajuste al contenedor, 
+  y la otra dimensión se ajustará proporcionalmente. Si la relación de aspecto del contenedor 
+  no coincide con la de la imagen, pueden aparecer áreas del contenedor que no estén cubiertas por la imagen.
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 

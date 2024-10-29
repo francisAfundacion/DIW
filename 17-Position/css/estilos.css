@@ -1,0 +1,71 @@
+
+div.ejemplos  div {
+    width:100px;
+    height:100px;
+    border:1px solid black;
+}
+.estatico{
+    position: static; /*valor por defecto*/
+    /*NO SE PUEDE USAR top,bottom,left o right, pq no se va a mover*/
+    background-color: aquamarine;
+}
+.relativo{
+    /*puede tener valores negativos al posicionarlos*/
+    position:relative;
+    left:200px;
+    top:-200px;
+}
+
+.ejemplos .absoluto{
+    /*se mueve en relacion a  div.ejemplos*/
+    position:absolute;
+    left:0px;
+    top:0px;
+    /*No deja hueco al moverse*/
+    overflow:hidden;  /*para que no se  muestre el contenido que sobresale*/
+    z-index:-4;
+    background-color:red;
+    width:50px;
+    height:50px;
+}
+.hijo {
+    width:60px;
+    height:60px;
+    background-color: aquamarine;
+    position:absolute;
+    /*tiene un padre posicionado con valor absoluto*/
+    /*Se mueve con respecto a su padre.*/
+    top:50%;
+    right:50%;
+    /*si quiero escoger al hijo, tendría que darle un valor menor que el padre*/
+}
+
+.fijo {
+    position:fixed;
+    top:0px;
+    right:0px;
+    background-color: blue;
+    /*No se mantiene el hueco*/
+    z-index:100px;
+}
+
+.pegajoso{
+    width:100%;
+    background-color: aquamarine;
+    position:sticky;
+    /*se mantiene en su posicion normal hasta que le especifique cuando quiero que se pegue*/
+    top:0;
+    /*mantente relativo hasta que el top llegue a cero*/
+}
+
+/*PROPIEDAD PERMITE ORDENAR LOS ELEMENTOS ,PARA CONTROLAR QUIEN SE VE ARRIBA O ABAJO
+SOLO SE PUEDE UTILIZAR CON LOS ELEMENTOS POSICIONADOS(todos los position diferentes de static).
+es un número que indica el orden y puede ser positivo o negativo.
+Si es negativo estará mas hacia abajo que algo positivo.
+(-3(Más arriba),5(Más arriba))
+Si un eleeento no tiene z-indez, su valor por defecto es 0 
+y si dos elementos tienen el mismo valor de z-index, se posicionrá por encima el último.
+*/
+
+/*z-index al fijo*/
+/*z-index absoluto*/
