@@ -1,0 +1,30 @@
+/*
+• Crea una galería de imágenes tal y como muestra la siguiente imagen:
+*/
+
+*{
+    padding:0;
+    margin:0;
+}
+div .galeria{
+    position:relative;
+    height:800px;
+}
+img {
+    display:block;
+    position:absolute;
+    width:35%;
+    height:200px;
+}
+
+img .imagen1_izquierda, img .imagen2_izquierda{
+    left: 0;
+}
+
+img .imagen1_izquierda{
+    z-index: 2;
+}
+
+img .imagen1_izquierda{
+    z-index: 1;
+}

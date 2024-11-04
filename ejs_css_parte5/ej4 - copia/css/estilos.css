@@ -1,0 +1,22 @@
+/* Utilizando la propiedad de posicionamiento float, crea una página como la que se
+muestra en la que diversos contenedores se muestran flotando uno al lado del otro. Los
+contenedores tienen tamaño alto=100px ancho=100px*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+h4{
+    text-align: initial;
+    margin-bottom: 10px;
+}
+div:not(.clearfix) {
+    background: rgb(214, 202, 202);
+    border:2px solid black;
+    padding:50px;
+    width:25%;
+    float:left;
+}

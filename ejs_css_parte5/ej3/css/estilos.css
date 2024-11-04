@@ -1,0 +1,39 @@
+/* Utilizando la propiedad de posicionamiento float, crea una página como la que se
+muestra en la que diversos contenedores se muestran flotando uno al lado del otro. Los
+contenedores tienen tamaño alto=100px ancho=100px*/
+
+body{
+    text-align: center;
+}
+.azul, .verde,.amarillo,.rojo{
+    width:100px;
+    height:100px;
+    line-height:100px;
+    float:left;
+}
+.azul{
+    background-color: blue;
+}
+.verde{
+    background-color: green;
+}
+.amarillo{
+    background-color: yellow;
+}
+.rojo{
+    background-color: red;
+}
+
+/*
+
+.rojo ~ *{
+    clear:left;
+}
+*/
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+

@@ -3,6 +3,7 @@
     padding:0;
     box-sizing: border-box;
 }
+
 .new-rocker-regular {
     font-family: "New Rocker", system-ui;
     font-weight: 400;
@@ -12,89 +13,56 @@ body{
     text-align:center;
     background-color: #E9D6B8;
 }
-/*comunes a ambas listas*/
+/*------------------------------------------Propiedades comunes a ambas listas---------------------------------------*/
 ul{
     list-style:none;
-    display:block;
-    filter: brightness(0.7) contrast(1.2);
+}
+ul > li {
+    width:110px;
+    height:85px; /*cambiará según el line-height,sieste es mayor*/
 }
 ul li a{
     color:white;
-    
-}
-ul > li {
-    width:70px;
-    height:45px; /*cambiará según el line-height*/
     background-image: url('img/tazaopcion.jpg');
     background-repeat:no-repeat;
     background-position-y:center;
     background-position-x:center;
     background-size:contain;
     line-height: 85px;
+    filter: brightness(0.7) contrast(1.2);
+    text-decoration: none;
+}
+ul > li > a:hover{
+    color:rgb(226, 142, 74);
+    font-size: 20px;
+    width:120px;
+}
+ul > li > a::first-letter{
+    font-weight:930;
+    text-shadow:10px 10px 10px rgb(255, 255, 255);
+     /*sombra derecha(+ positivos)/izq(+ negativos) , sombra arriba(+ negativos)/abajo(`positivos), cantidad desenfoque sombra */
+}
 
+ul > li > a.activo:hover{
+    filter: brightness(1.2) contrast(0.8);
 }
 /*----------------------------------------------------Lista Vertical------------------------------------------------------*/
-ul.vertical > li > a{
+ul.vertical > li > a {
     display:block;
 }
-ul.vertical> li > a:hover(.activo) {
-    display:block;
-    filter: brightness(0.7) contrast(1.2);
- }
-ul.vertical> li > a:not(.activo) {
-    display:block;
-    filter: brightness(0.7) contrast(1.2);
- }
- ul.vertical > li > a:hover:not(.activo){
-    color:rgb(226, 142, 74);
-    font-size: 20px;
-    width: 90px;
 
-}
-ul.vertical > li > a.activo{
-    display:block;
-    line-height: 85px;
-    filter: brightness(0.7) contrast(1.2);
-}
-ul.vertical > li > a.activo:hover{
-    color:rgb(226, 142, 74);
-    font-size: 20px;
-    filter: brightness(0.9) contrast(1.2);
-    width: 90px;
-}
 ul.vertical > li{
     margin: 42px 0px;
 }
 
-/*--------------------------------------horizontal => con float---------------------------------------------------------*/
-
+/*--------------------------------------Lista Horizontal empleado la propiedad float---------------------------------------------------------*/
 ul.horizontal{
-    margin:20px 20px;
+    margin:0px 0px;
 }
-
+ul.horizontal > li > a{
+   display:block;/*Para poderle dar dimensiones, ya que si no las puedo asignar como elemento en línea*/
+}
 ul.horizontal > li {
     float:left;
-    margin:0px 5px;
-    /*como line-height de a de 85 al no darle height ,ocupará acorde al contenido*/
 }
     
-ul.horizontal > li > a.activo:hover{
-    color:rgb(226, 142, 74);
-    font-size: 20px;
-    filter: brightness(0.9) contrast(1.2);
-    width: 90px;
-}
-ul.horizontal > li > a:not(.activo){
-    filter: brightness(0.7) contrast(1.2);
-
-}
-
-ul.horizontal > li > a:hover:not(.activo){
-    color:rgb(226, 142, 74);
-    font-size: 20px;
-    width: 90px;
-
-}
-
-
-  

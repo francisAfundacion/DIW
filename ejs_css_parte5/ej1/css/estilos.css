@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.imagen {
+    width: 800px;
+    height: 600px;
+    background-color: blue;
+}
+.rojo , .green{
+    width:50px;
+}
+.amarillo,.violeta{
+    height:50px;
+}
+.rojo {
+    background-color: red;
+}
+.verde{
+    background-color: green;
+}
+.amarillo{
+    background-color: yellow;
+}
+.violeta{
+    width:100%;
+
+    background-color: purple;
+}

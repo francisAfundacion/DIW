@@ -1,0 +1,9 @@
+/*Con la propiedad float, deja que la primera letra de un párrafo flote a la izquierda. Deberás
+añadirle estilo de forma que tenga más tamaño.*/
+p::first-letter{
+    float:left;
+    font-size:80px;
+    text-shadow: 20px 20px 20px white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
