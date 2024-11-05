@@ -1,0 +1,56 @@
+/*
+Utilizando el posicionamiento absoluto para posicionar las cajas en las distintas partes de
+la página web y la propiedad z-index que muestra el orden de los elementos en la página
+realiza el siguiente ejercicio. Son tres bloques o contenedores principales, Bloque 1,
+Bloque 2 y Bloque 3 y el Bloque 2 tiene tres bloques hijo. Lo que se pretende es demostrar
+que el orden de los hijos del Bloque 2 es independiente del orden del Bloque 2 en relación
+a Bloque 1 y 3.
+*/
+*{
+    box-sizing: border-box;
+}
+div{
+    position:absolute;
+}
+.bloque1 {
+    background-color: red;
+    width:700px;
+    height:200px;
+    top:100px;
+    z-index: 10000;
+}
+.bloque2{
+    background-color: blue;
+    width:750px;
+    height:600px;
+    z-index:100;
+}
+.bloque3{
+    background-color: yellow;
+    width:1000px;
+    height:100px;
+    left:0;
+    top:500px;
+    z-index:-10000;
+
+}
+.hijo1_bloque2{
+    background-color: pink;
+    width:280px;
+    height:100px;
+    left:400px;
+    top:300px;
+}
+.hijo2_bloque2{
+    width:150px;
+    height:450px;
+    left:500px;
+    background-color: green;
+    z-index:-100
+}
+.hijo3_bloque2{
+    width:200px;
+    height:100px;
+    background-color: aquamarine;
+    bottom:0;
+}

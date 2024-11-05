@@ -1,0 +1,62 @@
+/*
+Utilizando las distintas formas de posicionamiento (static, relative, absolute, fixed), crea
+una página web en la que insertes una imagen y sobre ella diversos textos encima
+colocados tal y como se ven en la imagen siguiente.
+*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-size:14px;
+}
+
+img{
+    margin:10px 0px;
+    display:block;
+    width:500px;
+    height:500px;
+    border:2px solid black;
+    opacity:0.4;
+}
+p {
+    position:absolute;
+}
+.txt1 , .txt2, .txt5{
+    font-family: sans-serif;
+}
+.txt1{
+    left:0px;
+    top:35px;
+    font-size:20px;
+}
+.txt2 {
+    font-size:10px;
+    color:red;
+    left:468px;
+    top:35px;
+}
+
+.txt3{
+    color:blue;
+    font-size:50px;
+    left:368px;
+    top: 485px;
+
+}
+
+.txt4{
+    color:green;
+    font-size:25px;
+    left:0px;
+    top:510px;
+    text-decoration:1px green underline;
+    text-transform: uppercase;
+}
+.txt5{
+    font-size:12px;
+    top:268px;
+    left:250px;
+    color:brown;
+}

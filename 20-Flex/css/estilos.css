@@ -1,0 +1,94 @@
+/*
+DISPLAY FLEX
+Definicion:
+display => cambia previsual elementos
+Ahora vamos a hacer que tenga una visualización flexible
+que es flexible? evitar usar float, inline-block,block.
+Es Responsive
+Tanto el elemento como los hijos directos
+tendrán una serie de propiedades.
+
+El elemento que tenga propiedad flex, tendrá una serie de propiedades
+específicas y sus hijos directos tendrán unas propiedades específicas.
+
+PROPIEDADES DEL CONTENEDOR FLEXIBLE(PADRE).
+    FLEX-DIRECTION:indica la dirección de los hijos flexibles.
+    VALORES:
+    row (valor por defecto)
+    column
+    row-reverse (en fila al final del navegador, alterando el orden)
+    column-reverse
+    jsutify-content => alinea horizontalmente cuando la dirección es row
+    y verticalmente cuando la dirección es column.
+    Vamos a usar más el row y column.
+        VALORES:
+            center,flex-start,flex-end,space-between(deja un espacio automáticamente entre los elementos)
+            ,space-evenly(ESPACIOS ANTES Y DESPUÉS),space-around(HACE LO MISMO QUE -EVENLY, PERO ES MÁS PEQUEÑO EL ANTES Y DESPUES QUE EL ESPACIO ENTRE LOS ELEMENTOS).
+    align-items :alinea vertical o horixontal,dependiendo del flex-direction
+    En el row será verticcal y en column horizontal.
+        VALORES: center,flex-start,flex-end
+        No space.between,space-around, pq no podemos partir los elementos,SOLO TENEMOS UN DIV
+
+    flex-wrap:Permite tener o no varias filas de elementos flexibles.
+        valores:
+            no-wrap(valor por defecto, no podemos tener varias filas)
+            Si excede ancho pantalla elementos, se hacen mas pequeños para poder ajustarse el ancho
+            wrap(ppodemos tener varias filas)
+    Align-content => alinea las lineas o columnas generadas
+            PROPIEDADES DE LOS HIJOS DIRECTOS DEL CONTENEDOR FLEXIBLE
+
+            flex-flow => flex-direction +flex-wrap
+*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.flex-container-row, .flex-container-col{
+    background-color: brown;
+}
+.flex-item{
+    width:100px;
+    height: 100px;
+    border:1px solid black;
+    background-color: bisque;
+}
+
+.flex-container-row{
+    /*NO PERMITE SOACE-BETWEEN EN FILA => AILGN ITEMS*/
+      /*Por defecto los hijos directos se van a colocar uno detrás del otro */
+    display: flex;
+    /*todos los items se van alinear horizontalmente*/
+    justify-content: space-between;
+    /*Alinea verticalmente no veré nada si el contenedor no tiene altura*/
+    align-items:center;
+    height:500px;
+    flex-wrap:wrap; /*ahora puedo tener + filas*/
+    align-content: space-between;
+    /*align-content
+        alinea las filas de los elementos flexibles
+    
+    */
+
+}
+.flex-container-col{
+    /*Por defecto los hijos directos se van a colocar uno detrás del otro */
+  display: flex;
+  flex-direction: column;
+  /*alinea verticalmente*/
+  /*
+    
+  */
+  justify-content: center;
+  /*PARA VERLO TENGO QUE DARLE ALTURA AL CONTENEDOR, SINO NO TENGO ESPACIO PARA QUE SE ALINEEN VERTICALMENTE*/
+    height:700px;
+/*Alinea horizontalmente*/
+  /*alin-items cuando dirección es columna , no permite space-between,spacea-round[...] */
+align-items: center;
+/*cuando ya coja más se creara otra serie de columnas contiguas*/
+flex-wrap: wrap;
+/*NO PERMITE ALIGN ITEMS*/
+align-content: space-between;
+
+  
+}
