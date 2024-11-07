@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .flex-container {
+            height:200px;
+            background-color: aqua;
+            display:flex;
+            flex-direction:row;/*por defecto*/
+            justify-content:center; /*horixontal a lvl fila*/
+            align-items:flex-end; /*alineacion vertical*/
+            flex-wrap:wrap; /*crea filas elementos flexiles*/
+            /*align-content: center;no tenemos + filas, por lo que no va ha ha hacer nada*/ 
+            /*SI QUITAMOS WRAP, LOS HIJOS DE HARÁN `PEQUEÑOS PARA CABER EN UNA SOLA*/
+        }
+        /*PROPIEDADES DE LOS HIJOS FLEXIBLES
+            LOS HIJOS SON FLEXIBLES, PERO NO ES HEREDABLE EL VALOR DE DISPLAY FLEX
+            POR LO QUE NO PODEMOS USAR LAS PROPIEDADES TIPICAS DE PADRE QUE SI ES DISPLAY FLEX.
+            SON LOS SIGUIENTES LO QUE PODEMOS USAR:
+            order : cambia el orden del hijo flexible
+             flex-basis:indica tamaño del elemento flexible.Tambien podriamos conw idth.Vamos a ver
+             las diferencias
+             Prevalece más flex-basis que width
+                Se suele emplear flex-basis para poder agrndar o hacer mas pequeños elementos,
+                pq con width no los cogería correctamente.
+            align-self => ALINEA EL HIJO FLEXIBLE:VALORES
+                => flex-end
+                => flex-start
+                => center
+            flex-flow
+            flex-grow:Cuando hay espacio disponible,indica si
+             puede crecer o no  un hijo flexible.lA MEDIDA NO ES EN PX, ES UN NÚMERO SOLO
+             VALORES
+                0: no permite crecer
+                valor positivo > 0  permite crecer y cuanto mayor el número,más podrá crecer.
+            flex-grow => no hace falta saberlo, iria no considera importante.
+            flex-shrink => cuando no hay espacio, indica que hijo puede disminuir su tamaño.
+                VALORES::
+                0 => no puede disminuír.
+                > 0 => disminuira más cuanto más valor tenga
+                */
+        .flex-item{
+            background-color: bisque;
+            border:1px solid black;
+            flex-basis:100px;
+
+        }
+           /*busca primer elemento con clase flex-item*/
+           .flex-item:nth-of-type(1){
+             order:5;   
+             flex-basis:200px;
+             width:10px;
+             align-self:flex-start;
+             /*PREVALECE FLEX-BASIS ANTES DE WIDTH*/
+             flex-grow:0 ; /*no puede crecer*/
+            }
+            .flex-item:nth-of-type(2){
+             order:4;
+             flex-basis:300px;   
+             align-self:center;
+             flex-grow:1;
+            }
+            .flex-item:nth-of-type(3){
+             order:3;  
+             flex-basis:100px; 
+             align-self:flex-end;
+             flex-grow:2;
+            }
+            .flex-item:nth-of-type(4){
+             order:2; 
+             flex-basis:200px;  
+             align-self:center;
+            }
+            .flex-item:nth-of-type(5){
+             order:1; 
+             flex-basis:300px;  
+             align-self:flex-start;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+
+
+</body>
+</html>
