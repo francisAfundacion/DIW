@@ -5,44 +5,105 @@
 }
 body{
     color:#833F20;
+    font-size:16px;
+}
+a{
+    color:inherit;
 }
 header{
     display:flex;
-    height:600px;
+
     background-image: url(img/descafeinado_web.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: space-between;
+        
+}
+i{
+    font-size:25px;
+    color:white;
 }
 
-img:not(.logo){
-    width:50px;
-    height:50px;
-}
-img.logo{
-    width:120px;
-    height:80px;
+.logo{
+    width:150px;
+    height:auto;
 }
 
 /*-----------------*/
 footer{
     background-color: #D9D9D9;
-    height:150px;
+    height:200px;
+
 }
 .enlaces_politicas_mapa{
+    padding:10px 0px;
+}
+a{
+    text-decoration: none;
+    font-size:inherit;
+}
+.enlaces_politicas_mapa a:link {
+    color:#833F20;
+}
+.enlaces_politicas_mapa a:visited {
+    color: brown;
+}
+.enlaces_politicas_mapa a:active{
+    color:chocolate;  
+}
+.enlaces_politicas_mapa a:hover{
+    text-decoration:solid underline #833F20;
+}
+
+
+.enlaces_politicas_mapa, .contacto, .contacto_siguenos  {
   display:flex;
-  justify-content: center;
-  align-items:flex-start;
+  width:60%;
+  margin-bottom:10px;
 }
-.encabezados{
-    display:flex;
+.contacto{
+    width:360px;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:flex-start;
+    height:100px;
+}
+.siguenos{
+    height:200px;
+    width:200px;
+    margin-left:18%;
+}
+
+.enlaces_politicas_mapa {
+    justify-content: space-evenly;
+    margin-left: 12%;
+}
+.contacto_siguenos{
     justify-content:space-evenly;
+    margin-left:22%;
+   /* width:61.2%;*/
 }
-.contactotxt_redes_iconos{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
+ i:hover{
+    filter: contrast(0.4) brightness(1.2);
+    color:#833F20;
+ }
+
+
+
+
+/*
+.encabezados , .datos_encabezados {
+    margin-left:78px;
 }
+.encabezados {
+    justify-content: space-between;
+    width: 450px;
+}
+.datos_encabezados {
+    justify-content: space-around;
+    width:500px;
+}
+*/
     
 /*
 .menu_bar{
@@ -68,5 +129,3 @@ footer{
     width: 110px;
 }
 */
-
-
