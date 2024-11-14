@@ -12,11 +12,11 @@ a{
 }
 header{
     display:flex;
-
-    background-image: url(img/descafeinado_web.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(img/cabec_restaurante.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
     justify-content: space-between;
+    height:600px;
         
 }
 i{
