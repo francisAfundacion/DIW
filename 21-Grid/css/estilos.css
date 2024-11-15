@@ -1,0 +1,99 @@
+/*espacios de las cuadriculas externas => gap 
+    se divide en gap-column
+                  gap-row*
+ENTRA EN EXAMEN TIPO TEST         
+Display:inline-grid; => los hijos ocupan el espacio acorde al contenido por defecto, no todo el ancho. 
+*/
+
+/*
+
+*/
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.grid-container2{
+    display:grid;
+    background-color: aquamarine;
+    grid-template-columns: auto auto auto ; /*n columnas y ancho de las mismas.Reparte espacio  de forma equitativa acorde al contenido*/
+    column-gap: 100px;  /*si auto, les quita 10px de forma automática al ancho de la columna*/
+    /*gap:propiedad abreviada gap column gap row
+    ojo si unidades fijas => SE CREA BARRA HORIZONTAL
+    column-gap:espacio entre clumnas
+    row-gap:espacio entre filas
+    */
+    row-gap:100px; /*NCOMO NO HAY ALTURA NO HAY PROBLEMAS, SI LO HUBIERA OJO*/
+    
+}
+.grid-item2 {
+    background-color: yellow;
+    border:solid 1px black;
+}
+
+
+
+.grid-container{
+    display:grid; /*TAMAÑO TOTAL*/
+    /*Ddisplay:inline-grid; => OCUPA EL TAMAÑO QUE TIENE QUE OCUPAR, NO TODO EL ANCHO DE LA PANTALLA, POEMOS DARLE WIDTH O DIMENSIONES DE LO QUE SEA*/
+    background-color: aquamarine;
+    /*PROPIEDADES*/
+    /*
+    grid-template-columns => define número y ancho de las columnas de la cuadrícula.
+    Se le pasa  a la propiedad una lista de valores, separados por espacios:px,cm,rem,pto,%,
+    => importante fr(fracción de la cua´dricula),auto
+    */
+   /* grid-template-columns: 100px 300px 200px;*/
+    /*grid-template-columns: 25% 50% 15%;*/
+    /*grid-template-columns: 1fr 1fr 1fr;*7
+    /*divides ancho de tu cuadricula en fracciones*/
+    /*es una divisón del espacio en la cuadrícula,asigna espacio disponible a cada elemento*/
+    /*LO VA A DIVIDIR IGUAL, INDEPENDIENTEMENTE DEL CONTENIDO DE LOS ELEMENTOS*/
+   /* grid-template-columns: auto auto auto;*/
+    /*diferencia con fr, es que AUTO mira el contenido del elemento, por lo que dejará espacio 
+    acorde al contenido.*/
+    /*Puedo mezclar varias unidades de medida? SÍ*/
+    /*grid-template-columns: 25% 100px auto;*/
+    /*auto => lo que ocupa y lo sobra*/
+    /*
+        repeat(3,auto) => grid-template-colum:auto auto auto {EQUIVALENTES}
+    */
+    /*grid-template-columns: 100px 300px 200px ;*/
+    /*justify-content :MUEVE LA CUADRÍCULA Y LA ALINEA HORIZONTALMENTE
+    SOLO FUNCIONA SI TENGO ESPACIO EN MI CUÁDRICULA SI NO OCUPA EL 100%
+    */
+    justify-content: space-between;
+    /* grid-template-rows. INDICA NÚMERO DE FILAS Y TAMAÑO DE CADA FILA
+        sE LA PASA LISTA DE VALORES SEPARADOS POR ESPACIOS: px,%,rem,auto,fr
+        OJO CON LA ALTURA DEL PADRE SI USAMOS MEDIDAS RELATIVAS
+    */
+    /*height:300px;*/
+ /*   grid-template-rows: 25% 50% 25%; /*no haría nada pq depende de la ALTURA DEL PADRE Y NO TIENE TAMAÑO*/ 
+    /*grid-template-columns: repeat(3,auto); /*nada, pq ocupa lo que tiene que ocupar*/
+    /*SI TUVIERA MI CONTENEDOR GRID UNA ALTURA, OJO QUE SE PUEDE SALIR DE LA CUA´DRICULA*/
+       /*grid-template-rows: 100px 200px 300px 100px 200px 100px;*/
+        /*Como no tengo más elementos, va a tener un espacio en las filas extras que no se han generado*/
+    grid-template-columns:100px 200px 300px;
+    grid-template-rows: 300px 200px 100px;
+    height: 800px;
+    align-content: space-between;
+   /*align-content => alinea la cuadricula verticalmente
+        VALORES:CENTER,START,END,SPACE-BETWEEN..
+   */
+        /**/
+        /*VALORES:
+        CENTER
+        START
+        END
+        SPACE-BETWEEN
+        SPACE-AROUND
+        SPACE-EVENLY*/
+   /*px => no emplear a noser que estemos seguros que algñun elemento tenga un tamaño fijo*/
+    /*NO OCUPA TODO EL ANCHO DE LA PANTALLA, POR LO QUE VA A DEJAR ESPACIO*/
+    /*SI EL ANCHO DE MAYOR QUE EL DE LA PANTALLA => SE GENERA BARRA DE DESPLAZAMIENTO*/
+
+}
+.grid-items{
+    background-color: antiquewhite;
+    border:1px solid black;
+}
