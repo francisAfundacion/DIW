@@ -1,0 +1,49 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: 75% 25%;
+     /*grid-template-areas : crea la plantilla, de disposición de los elementos
+     grid que tienen un nombre establecidos con grid-area*/
+     grid-template-areas: "nav nav"
+                            "header header"
+                            "main aside"
+                            "footer footer";
+
+}
+nav{
+    background-color: aqua;
+       /*grid-area : propiedad abreviada de grid-column y de grid-row */
+    /*Podemos usar grid-area para usar propiedad abreviada o
+    para nombrar a los hijos grid*/
+    grid-area:nav;
+    /*grid-column: 1 / 3; lo hago por la plantilla*/
+    display:grid;
+    grid-template-columns: repeat(4,auto);
+    justify-content: center;
+}
+nav a{
+    padding:1.5rem;
+    text-decoration:none ;
+    color:white
+}
+header{
+    background-color: blueviolet;
+    grid-area:header;
+}
+
+main {
+    background-color: greenyellow;
+    grid-area: main;
+}
+aside{
+    background-color: brown;
+    grid-area:aside;
+}
+footer{
+    background-color: pink;
+    grid-area:footer;
+}
