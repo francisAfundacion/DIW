@@ -20,8 +20,12 @@
 body{
     color:#833F20;
     display:grid;
-    
-    font-size:1rem;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(3,1fr);
+    font-size:16px;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
 }
 
 
@@ -30,8 +34,9 @@ header{
     background-repeat:no-repeat;
     background-position:center;
     background-size:cover;
-    justify-content: space-between;
     height:31.25rem;
+    display: grid;
+    grid-area: header;
 }
 
 a{
@@ -69,6 +74,7 @@ i{
 main{
     padding:0.825rem 0;
     background-color: #E9D6B8;
+    grid-area: main;
 }
 
 main p {
@@ -79,10 +85,7 @@ footer{
     background-color: #D9D9D9;
     height:12.5rem;
     padding-top:1.6rem;
-}
-
-.enlaces_politicas_mapa {
-    padding-bottom:0.3125rem 0;
+    grid-area:footer;
 }
 
 .enlaces_politicas_mapa a:link {
@@ -98,36 +101,6 @@ footer{
 }
 
 .enlaces_politicas_mapa a:hover {
-    text-decoration:underline dotted 0.187rem #833F20;
+    text-decoration:underline dotted 2px #833F20;
 }
 
-.enlaces_politicas_mapa, .contacto, .contacto_siguenos {
-  width:60%;
-  margin-bottom:0.625rem;
-}
-
-.siguenos h4{
-    margin-bottom:0.625rem;
-    font-size:1rem;
-}
-
-.enlaces_politicas_mapa {
-    padding-top:0.625rem;
-    margin-bottom:0.625rem;
-}
-
-.contacto {
-    width:22.5rem;
-}
-
-.siguenos {
-    width:12.5rem;
-    margin-left:21.3%;
-}
-
-.enlaces_politicas_mapa {
-    margin-left: 12.3%;
-}
-.contacto_siguenos{
-    margin-left:20.95%;
-}

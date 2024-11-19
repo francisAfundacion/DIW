@@ -1,0 +1,66 @@
+
+/*puede poner como error con trma atributos, si lo pone solo, selecciona todos, sino el especificado*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+label{
+    font-weight: bold;
+}
+
+/*Selectores de atributos*/
+label[for="email"], label[for="password"]{
+    display: block;
+    margin-bottom: 10px;
+}
+label[for="terms"]{
+    display: inline-block;
+}
+form{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 40px;
+    box-shadow: 3px 3px 10px black;
+}
+
+/*pseudoclase not*/
+input:not(#terms){
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input[type="email"]{
+    background-color: lightcyan;
+    padding: 10px;
+}
+input[type="email"]:focus, input[type="password"]:focus{
+    border: 3px solid blue;
+}
+
+input[required]{
+    font-weight: bold;
+}
+input[type="password"]{
+    background-color: gainsboro;
+    padding: 10px;
+}
+input[type="submit"]{
+    background-color: lightseagreen;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+}
+input[type="submit"]:hover{
+    background-color: cadetblue;
+}
