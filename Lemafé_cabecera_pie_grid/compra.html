@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/compra.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Compra</h3>
+        <form>
+            <fieldset>
+                <legend>Datos personales</legend>
+                    <label for="nombre" required>Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Escriba su nombre.">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" placeholder="Escriba sus Apellidos.">
+                    <label for="dni" required>Dni:</label>
+                    <input type="text" id="dni" placeholder="Escriba su dni.">
+            </fieldset>
+        </form>
+
+        <form>
+            <fieldset>
+                <legend>Datos de Contacto</legend>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" placeholder="Escriba su dirección.">
+                <label for="CP">Código Postal:</label>
+                <input type="number" id="CP" placeholder="Escriba código postal.">
+                    <label for="pais">País:</label>
+                    <select id = "pais">
+                        <option value = "España">España</option>
+                        <option value ="Francia">Francia</option>
+                        <option value="Alemnia">Alemania</option>
+                        <option value= "Portugal">Portugal</option>
+                        <option value="Suiza">Suiza</option>
+                        <option value="Suecia">Suecia</option>
+                        <option value="Noruega">Noruega</option>
+                    </select>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Escriba  email.">
+                    <label for="telf">Teléfono:</label>
+                    <input type="number" id="telf" placeholder="Escriba  teléfono.">
+            </fieldset>
+        </form>
+
+        <form>
+            <fieldset>
+                <legend>Datos Bancarios</legend>
+                <label for="num_tarjeta">Número de tarjeta:</label>
+                <input type="number" id="telf" placeholder="Escriba su número de tarjeta.">
+                <label for="tipo_pago">Tipo de pago:</label>
+                <select id = "tipo_pago">
+                    <option>Paypal</option>
+                    <option>Mastercard</option>
+                </select>
+                <label for="fecha_caducidad">Fecha caducidad:</label>
+                <input type="date" id="fecha_caducidad">
+            </fieldset>
+        </form>
+</body>
+</html>
