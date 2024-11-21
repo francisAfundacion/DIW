@@ -1,0 +1,117 @@
+
+/*propiedades herdables entra en el examen fijo*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+    font-family:'Times New Roman', Times, serif;
+    /*
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    */
+}
+
+.container {
+    /*
+    */
+    margin: 0 auto;
+    background-color: black;
+    width: 80%;
+    border-radius: 20px;
+    overflow:hidden;
+    margin:auto;
+}
+
+.header  {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    /*si flex-wrap:wrap, no puedes tener el header establecido con un height* , si con min-height y max-height*/
+    padding-bottom: 20px;
+}
+
+.nav{
+    box-shadow: 1px 2px 6px greenyellow;
+    /*podria no hacer falta*/
+    display:flex;
+    flex-wrap:wrap;
+    overflow:hidden;
+
+}
+
+.nav a {
+    text-decoration: none;
+    color:white;
+    padding:20px;
+}
+
+.nav .activo{
+    border-top:greenyellow 5px solid;
+    background-color: grey;
+}
+.gallery {
+    display:flex;
+    flex-wrap: wrap;
+    padding:20px;
+    column-gap:20px; /*+ usual con grid*/
+    text-align:justify;
+}
+
+.target{
+    flex-basis:30%; /*prevalece ante width*/
+    color:white;
+    padding:10px 10px;
+}
+.target h2, .target img{
+    margin-bottom:10px;
+}
+
+.target:hover {
+    box-shadow:2px 1px 6px grey;
+}
+
+.nav a:hover:not(.activo){
+    background:yellowgreen;
+    color:black;
+}
+
+/*border redodeando color negro => container*/
+
+.imagenesPie{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+.imagenesPie img:hover {
+    filter:brightness(0.8) contrast(0.4);
+}
+
+.enlacesPie{
+    display:flex;
+    justify-content:flex-end;
+    padding-right:20px;
+    padding-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.footer .imagenesPie {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.enlacesPie  a {
+    color:yellowgreen;
+    text-decoration:none;
+}
+.footer .enlacesPie a:hover {
+    text-decoration: 2px solid green;
+}
+.enlacesPie span {
+    color:white;
+}
