@@ -1,0 +1,17 @@
+/*DISEÑO RESPONSIVE*/
+/*
+    => Cualquier dispositivo debería verse bien la página.
+    => No se genere barra lateral en el plano horizontal
+    => Se suele emplear una regla que se llama media queries
+    => QUE HACE LA REGLA?
+        => le digo una serie de características y segun el disopsitivo en el que s evea la pagina
+        => se aplica unos u otros
+    => meta => obtiene una serie de datos de tu viewport(datos pantalla gráfica)
+            => content => selecciona ancho del dispositivo en el que se visualiza la página
+            => initial_scale 1.0 => SIN ZOOM, a tamaño real.
+
+
+
+
+
+*

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Se activa el primer css cuando abra la pantalla en un ordenador-->
+    <!--<link rel="stylesheet" href="css/screen.css" media="screen">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <meta charset="UTF-8">
+-->
+   <!--<link rel="stylesheet" href="css/screen.css">-->
+    <link rel="stylesheet" href="css/colores.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <!--Consulta de medias o media queries
+        @media => que tipo de dispositivo está mostrando la página
+                => si en ancho , horizontal...
+                => si pantalla horizontal o vertical
+                => características si son verdaderas, se aplican unos estilos u otros.
+        => USO
+                => Para saber la orientación en la que se encuentra el dispositivo en el que se está
+                abriendo la página
+                    TIPOS : landScape, portrait
+                    Horizontal (landScape)
+                    Vertical (portrait)
+                => Ancho/alto máximo,mínimo ; ancho normal(incluye el scrolbar).
+                => Comprobar la resolución.
+
+            TIPOS DE MEDIOS
+            media =>
+            si no ponemos nada => se aplica a todos los medios los estilos de la hojas de estilos.Es como establecer all
+            all => se aplica a todos los medios.
+            screen => pantalla de móbiles, tablets, ordenadores.
+            print => modo impresión.
+            Puntos de ruptura => dónde la página cambia drásticamente la visualización
+            SINTAXIS
+                media not/only tipoMedio and (caractéristica1) and (característica2)
+                //instrucciones css
+                @media : propiedad de la consulta de medias
+                not: negación que invierte todas las características indicadas en media
+                only: Para navegadores antiguos que no soportaran diseño responsive, para que no dieran errores.
+                tipoMedia: screen, print, all ...
+                Si no se pone ni not ni only, coge el valor por defecto all.
+                EJEMPLOS CARACTERÍSTICAS:
+                     => orientation:landscape(horizontal)
+                     => (max-width:708px)
+                     => (min-width:480px)
+                Ubicación del @media:
+                2 OPCIONES:
+                1.- Link en el head
+                    <link rel="stylesheet" href="css/smallscreens.css" media="screen" and (max-width:480px)>
+                2.-Crear un único css
+                    <link rel="stylesheet" href="estilos.css">
+                        @media screen and (max-width:480px) {
+                            //estilos css
+                        }
+
+                Queremos un css que se aplique cuando maximo ancho sea 480 px => rojo
+                entre 481-600px => azul
+                601-900px => green
+                901px o más => rosa
+    -->
+            <h2>ENCABEZADO H2</h2>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/*ESTILOS GENERALES CUANDO NO ENTRA EN NINGUNA DE LAS CARACTERÍSTICAS de "media*/
+/*QUEREMOS EMPEZAR EL MÁS PEQUEÑO*/
+
+
+    body {
+        background-color: red;
+    }
+
+/*
+@media screen and (max-width:480px) {
+    body {
+        background-color:red
+    }
+}
+*/
+
+
+@media screen and (min-width:481px) and (max-width:600px) {
+    body {
+        background-color:blue
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:900px) {
+    body {
+        background-color:green
+    }
+}
+
+
+
+/*
+@media screen and (min-width:901px)  {
+    body {
+        background-color:pink
+    }
+}
+    si ponemos solo como condicinales max-width , ordenariamos de más grande a más pequeña
+*/
+
+@media screen and (orientation:landscape) {
+    h2 {
+        font-family:'Courier New', Courier, monospace;
+        font-size:40px;
+    }
+}
+/*apartir de 902 de ancho   */
+@media screen and (orientation:portrait) {
+    h2 {
+        font-family: 'Courier New', Courier, monospace;
+        size:20px;
+    }
+}
+/*puntos de ruptura típicos
+    => Pantallas extra pequeñas (teléfonos de hasta 600px)
+    => Pantallas pequeñas (tablets en vertical y large phones) : desde 601px hasta 768px
+    => Pantallas medianas (tablets en horizontal) desde 768 a 992px
+    => Pantallas grandes(laptops,desktop) 992px - 1200px
+    => Pantallas extragrandes(large laptops/desktop) : desde 1200 px
+
+
+*/
