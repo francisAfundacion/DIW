@@ -1,0 +1,49 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: black;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius:20px;
+    width:90%;
+    margin:0 auto;
+}
+
+.nav {
+    box-shadow:2px 2px 8px greenyellow;
+    display:flex;
+    padding:10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color:white;
+    padding:15px;
+}
+
+.nav a:not(.activo):hover {
+    background-color: grey;
+}
+
+ .nav a.activo {
+    border-top:yellow 4px solid;
+    background-color: grey;
+ }
+
+ @media screen and (min-width:601px) and (max-width:768px) {
+
+    .header {
+        flex-direction:column;
+        justify-content: center;
+    }
+    img {
+        margin-bottom:10px;
+    }
+
+ }

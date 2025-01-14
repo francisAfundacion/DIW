@@ -1,0 +1,74 @@
+/*  ESTILOS GENERALES flex y float para primera página ejemplo*/
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align:center;
+}
+
+.container {
+    display:flex;
+    align-items: center;
+    /*flex-direction:row => por defecto*/
+    
+}
+
+#menu {
+    flex-basis:200px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    padding:10px;
+    /*width:200px*/
+    /*float:left*/
+}
+
+/*Limpiar margen ultimo enlance del menú */
+#menu a:last-child {
+    margin-bottom: 0;
+}
+
+#menu > a {
+    /*a => al ser hijo flexible ocupa por defecto todo el ancho del padre*/
+   /* display:block;*/
+    background-color: lightblue;
+   /* padding:5px;*/
+    margin-bottom:5px;
+}
+
+#menu > a:hover {
+    filter: brightness(0.4);
+}
+
+#main {
+    /*Para calcular el ancho restante*/
+    flex-basis:calc(100% - 200px);
+    padding:10px;
+    /*float:left*/
+    /*width: calc(100% - 200px)*/
+}
+ 
+/*Consulta de Medios o media query, comprobar en que dispositivo
+se está visualizando la página*/
+@media screen and (max-width:480px){
+
+   .container {
+    flex-direction: column; /*con float lo sacamos*/
+   }
+
+   #menu, #main {
+   /* flex-basis:100%;*/
+    width:100%;
+    /*float:none => para que no floten y se vea uno debajo del otro!!!*/
+   }
+   
+}
+
+/*si tuvieramos mas contenido hariamos un clear AL USAR FLOAT EN VEZ FLEX*/
