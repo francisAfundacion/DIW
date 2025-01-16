@@ -4,16 +4,24 @@
     box-sizing: border-box;
 }
 
-.header {
+.container {
     background-color: black;
+    width:90%;
+    margin:0 auto;
+    border-radius:20px;
+}
+
+.header {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    border-radius:20px;
-    width:90%;
-    margin:0 auto;
+    padding:20px;
+    text-align:center;
+    /*cuidao con align items, dado que al cambiar  a pantalla pequeña align-items en flex-direcition column
+    alinea pero horizontalmente, entonces no aplica  se aplica bien el tamaño de los enlaces, debido a ello, pq
+    entiede que tiene que centrarse*/
 }
+
 
 .nav {
     box-shadow:2px 2px 8px greenyellow;
@@ -42,8 +50,26 @@
         flex-direction:column;
         justify-content: center;
     }
+        img {
+            display:block;
+            margin:auto;
+            margin-bottom:20px;
+        }
+
+ }
+ @media screen and (max-width:600px) {
+
     img {
-        margin-bottom:10px;
+        display:block;
+        margin:auto;
+        margin-bottom:20px;
+    }
+    
+    .header {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
     }
 
  }
