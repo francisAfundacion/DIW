@@ -1,0 +1,37 @@
+h1 {
+   /* font-size : 5vw;*/
+   font-size:clamp(1.5rem, 5vw, 3rem) /*24 px de minimo ,5vw, 48px*/
+   /*Como calculo cuand hace el cambio?*/
+   /*5% *anchopantalla = 24px => en pantalla de 480 cambia y se queda con el minimo*/
+   /*5% * ancho = 48px => 960px => coge el valor máximo*/
+   /*
+   5vw => 5% ancho pantalla
+   1.5 rem => 24px
+   
+   */
+}
+
+/*EXAMEN TIPO TEST*/
+/*SI ES MÁS PEQUEÑA LA IMAGEN QUE EL ANCHO NO LA REDIMENSIONA, Y SI EL DISPOSITIVO ES MENOS ANCHO QUE LA IMAGEN LA ADAPTA
+*/
+.backgroundimg  {
+    background-image: url('grande.jpg');
+}
+/*
+img {
+    max-width: 100%;
+    height:auto;
+}
+    */
+/*
+@media screen and (min-width:601px) {
+    h1   {
+        font-size:30px;
+    }
+}
+@media screen and (min-width:992px) {
+    h1 {
+        font-size:40px;
+    }
+}
+    */

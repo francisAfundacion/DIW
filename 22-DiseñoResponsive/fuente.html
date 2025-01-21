@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="fuentes.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        => No utiliza medidas absolutas como px por norma general
+        => Utilizar medidas relativas en medida de lo posibles:
+            - em 
+                => Depende del elemento padre.
+            -rem
+                => Depende del elemento raíz (html).
+            -%
+                => Depende del elemento padre
+            - vw: viewport width, viewport heigh => NOS SIRVE PARA EL DISEÑO DESPONSIVE.
+                => Medirá tanto % de la unidad indicada del dispositivo con reespecto al ancho .
+            - vh
+                 => Medirá tanto % de la unidad indicada del dispositivo con reespecto al alto.
+             clamp (tamaño_mínimo, tamaño_ideal, tamaño_máximo)
+                tamaño_mínimo 
+                  => No puede ser inferior a este tamaño con respecto a la fuente
+                  => Suele estar en medidas relaticas
+                tamaño_máximo
+                  => No puede ser superior a este tamaño en la fuente
+                  => Suele estar en medidas relativas
+                  => Usual con rem
+                tamaño ideal
+                  => Normalmente en vw e irá variando sin pasar el mínimo y máximo
+                
+                Diseño reponsive para imágenes:
+                width:100% y height:auto para ajustar las imágenes.
+                Usar picture para asignar diferentes imágenes segun los dispositivos.
+                MEJOR ESTABLECER IMAGEN CON MAX-WIDTH, (SIN PONERLA)PQ SI LA IMAGEN ES MÁS peque LA AMPLIA
+                HASTA QUE CUBRA TODO EL CONTENEDOR, PERDIENDO CALIDAD VISUAL.
+                => PONIENDOLA => NO LA AMPLIA
+                => DEPENDIENDO DEL DIspositivo nos puede interesar cambiar la imagen
+
+                picture crea la opcion para mostrar difernetes imageen ssegun dispo
+                source=> donde se encuentra cada una de las imagenes que quieres mosytrar segun el dispos
+                srcset => las rutas de esas imagenes
+                ponemos un img, para establecer una imágen por defecto en caso de que los sources
+                no sean identificados por el navegador
+
+                Diseño Responsive para imágenes fondos de pantalla:
+                     => background-image: url()
+                     => background-size
+                        => 100% 100%
+                        => cover => se desescala y la corta
+                        => certain => la corta, mantiene la relacion de la imagen
+                cambiar imágenes con consultas de medias
+
+
+    -->
+    <h1> ESTO ES UN ENCABEZADO</h1>
+    <picture>
+        <!--
+        <source srcset="imagen1.jpeg" media="(max-width:760px)">
+        <source srcset="grande.jpg" media="(max-width:769px)">
+        <img src="imagen1.jpeg" >
+        -->
+        <div class = "backgroundimg">
+
+        </div>
+    </picture>
+</body>
+</html>

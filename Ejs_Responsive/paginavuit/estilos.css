@@ -17,23 +17,24 @@ body{
 }
 
 .container {
+    /*
+    */
+    margin: 0 auto;
     background-color: black;
-    width:90%;
-    margin:0 auto;
-    border-radius:20px;
+    width: 80%;
+    border-radius: 20px;
+    overflow:hidden;
+    margin:auto;
 }
 
-.header {
+.header  {
     display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding:20px;
-    text-align:center;
-    /*cuidao con align items, dado que al cambiar  a pantalla pequeña align-items en flex-direcition column
-    alinea pero horizontalmente, entonces no aplica  se aplica bien el tamaño de los enlaces, debido a ello, pq
-    entiede que tiene que centrarse*/
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    /*si flex-wrap:wrap, no puedes tener el header establecido con un height* , si con min-height y max-height*/
+    padding-bottom: 20px;
 }
-
 
 .nav{
     box-shadow: 1px 2px 6px greenyellow;
@@ -81,6 +82,7 @@ body{
 }
 
 /*border redodeando color negro => container*/
+
 .imagenesPie{
     display:flex;
     justify-content:space-evenly;
@@ -113,69 +115,3 @@ body{
 .enlacesPie span {
     color:white;
 }
-
- @media screen and (min-width:601px) and (max-width:767px) {
-
-    .header {
-        flex-direction:column;
-        justify-content: center;
-    }
-        img {
-            display:block;
-            margin:auto;
-            margin-bottom:20px;
-        }
-
-    .gallery {
-        justify-content: center;
-    }
-    .target {
-        flex-basis:40%;
-    }
-
-    .footer .imagenesPie {
-        justify-content: center;
-    }
-
-    .enlacesPie {
-        flex-direction:column;
-        align-items: center;
-    }
-
-    .enlacesPie .barra_vertical {
-        display:none;
-    }
-
- }
- @media screen and (max-width:600px) {
-    img {
-        display:block;
-        margin:auto;
-        margin-bottom:20px;
-    }
-    
-    .header {
-        flex-direction: column;
-    }
-    .nav {
-        flex-direction: column;
-    }
-
-    .target {
-        flex-basis:inherit;
-    }
-
-    .footer .imagenesPie {
-        justify-content: center;
-    }
-
-    .enlacesPie {
-        flex-direction:column;
-        align-items: center;
-    }
-
-    .enlacesPie .barra_vertical {
-        display:none;
-    }
-
- }
