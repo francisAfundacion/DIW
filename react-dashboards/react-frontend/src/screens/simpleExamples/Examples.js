@@ -5,6 +5,7 @@ import SimpleStyleChanger from "../components/simple_style_changer/SimpleStyleCh
 import TimestampChecker from "../components/timestamp_checker/TimestampChecker"
 import { useState, useEffect } from "react"
 import DashboardListItem from "../components/dashboard_list_item/DashboardListItem"
+import QuestionListItem from "../components/question_list_item/QuestionListItem"
 
 import axios from "axios"
 const Examples =  () => {
@@ -58,6 +59,12 @@ const Examples =  () => {
                      <p>Aquí se muestra un DashboardListItem de ejemplo</p>
                     <DashboardListItem dashboard={{id: 0, title: "Title", description: "Contenido mock"}} />
                 </div>
+                <div data-cy='issue21div'>
+                    <h1>Ejercicio 21</h1>
+                    <p>Aquí se muestra un QuestionListItem de ejemplo</p>
+                    <QuestionListItem question={{question_id: 0, title: "Title", description: "Contenido mock"}} />
+                </div>
+
 
             </div>
 

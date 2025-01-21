@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import DashboardListItem from "../components/dashboard_list_item/DashboardListItem"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import "./Main.css"
 
-const Main  = () => { 
+const Main  = (props) => { 
+    
+    const navigate = useNavigate();
+    const onClick = () => {
+        navigate('/dashboards/'+ props.dashboard.id)
+        console.log('clicked')
+    }
     const [dashboards, setDashboards] = useState([])
     useEffect(() => {
         axios.get('http://raspi:8081/api/v1/dashboards').then(response => {
@@ -33,10 +39,8 @@ const Main  = () => {
             </div>
         <div>
             <h2>Dashboards</h2>
-            <div data-cy="dashboardsList">
-                {dashboards.map((dashboard) => (
-                <DashboardListItem key={dashboard.id} dashboard={dashboard} />
-                ))}
+            <div data-cy='dashboardsList'>
+                { dashboards.map((d) => { return <DashboardListItem dashboard={d}/> }) }
             </div>
         </div>
         </footer>
