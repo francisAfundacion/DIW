@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Diferencias entre transicion(cambios graduales provocado por algo) y 
+    animación(pueden ser provocadas por si misma o otros factores)
+    En cambio la transición no pueden ser provocado por si misma.
+
+    ANIMACION
+    se crea con regla @keyFrames.
+    => Es una regla css, se sitúa en el documento css, dentro del style.
+    Sintaxis:
+    
+    animación con dos fotogramas.
+    =>con from o 0%
+    @keyFrames nombreAnimacion {
+        fotograma inicial
+        from  o 0% {
+            css fotograma_inicial
+            //primer estado /fotograma
+        }
+        fotograma final
+        to  o 100% {
+            //estilos css
+        }
+ }
+        Animación con más de  2 fotogramas.
+        => No podemos usar en este caso ni from ni to.
+        => Utilizar % como fotogramas queramos.
+        @keyframes nombreAnimacion {
+            0% {
+                estilos css
+            }
+            50% {
+                estilos css
+            }
+            100% {
+                otros estilos css
+            }
+
+            Tras crear la animación hay que asociarla a algún elemento html
+            => animation (propiedad abreviada)
+            animation-name
+            animation-duration
+            animation-delay
+        }
+   
+    -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pelota"></div>
+</body>
+</html>

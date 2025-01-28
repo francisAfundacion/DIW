@@ -1,0 +1,77 @@
+.pelota {
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    background-color: yellowgreen; /*Seria mejor ponerlo en el from o estado inicial, porque si no habra un sato de color raro*/
+    animation-name: cambiaPosicion, cambiarColor;
+    /*animation-name => es obligatorio, nombre animación creada.*/
+    /*animation-duration => es obliigatorio, ya que por defecto es 0 y ser positivo*/
+        /*Los valores pueden ser en s o ms.*/
+    animation-duration: 4s;
+    /*animation-iteration-count: infinite, 1, 2,3, 4
+        => por defecto es 1.
+    */
+    animation-iteration-count: infinite;
+    position:relative;
+    animation-direction:alternate-reverse;
+    animation-delay: -2s ;
+    /*se mide en s o ms*/
+    /*positivo o negativo
+    => negativo => la animación ya está empezada
+    => positivo => letarga
+    */
+    /*ease, ease in,  ease out, case in, case out */
+    animation-timing-function:linear ;
+    /*velocidad de la función*/
+    animation: cambiaColor 4s linea infinite normal, cambiaPosicion 4s linea infinite normal;
+    /*animation-fill-mode
+     => si la animación no se reproduce de forma infinite, como queda  el estado final:
+     forwards => se queda en el primer fotograma
+    backwards => se queda en el ultimo fotograma
+
+    */
+    animation-fill-mode: ;
+}
+
+@keyframes cambiaColor {
+  0%{
+    background-color: yellowgreen; /*mejor poner el mismo estilo base*/
+}
+  50% {
+    background-color: rgb(226, 43, 43);
+    left: 20px;
+
+}
+  100%{
+    background-color: yellowgreen;
+  
+}
+}
+
+@keyframes cambiaPosicion {
+
+    0% {
+        top:0px;
+        left:0px;
+    }
+
+    25% {
+        top:0px;
+        left: 300px;
+    }
+
+    50% {
+        top:300px;
+        left:300px;
+    }
+
+    75% {
+        top:300px;
+        left:0px;
+    }
+
+    100% {
+        top:0px;
+        left:0xp;
+    }
+}

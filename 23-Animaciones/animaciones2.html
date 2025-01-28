@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .escalar {
+            width:100px;
+            height:100px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            animation: cambiar_tamano 5s reverse  linear infinite;
+            /*
+            animation-name:animacion1, animacion2   
+            animation: duration 2s;
+            animation-iteration-count:infinite;
+            animation-delay:0s;
+            animation-timing-function_linear;
+            animation:escalar 2s linear infite
+            
+            */
+        }
+
+        .escalar:hover {
+            animation-play-state: paused;
+        }
+
+        .circulo {
+            width:100px;
+            height:100px;
+            background-color: blanchedalmond;
+            border-radius: 100%;
+            animation: mover 2s  ease-in-out 1
+        }
+
+        img {
+            animation: rotar2d 2s  linear infinite;
+            width:20%;
+            height:auto;
+        }
+        .forma {
+            width:280px;
+            height:280px;
+            background-color: brown;
+        }
+
+      .forma {
+        animation: cambiaFormas 3s ease-in-out infinite
+      }
+        /*ANIMATION-PLAY-STATE => INDICA SI LA LA ANIMACION ESTA RUNNIN O PASUADA*/
+        /*click-path => para cambiar formas*/
+        @keyframes cambiar_tamano {
+            0% {
+                transform: scale(1,1); /*mantiene unidades originales*/
+                background-color: blue;
+            
+            }
+
+            25% {
+                tranform:scale(2,2); /*doble de su tamaño*/
+                background-color: blueviolet;
+            }
+
+            50% {
+                tansform:scale(1,1); /*vuelve al tamaño original*/
+                background-color: aquamarine;
+            }
+
+            75% {
+                transform:scale(0.5,0.25);
+                background-color: burlywood;
+            }
+
+            100% {
+                tansform:scale(1,1);
+                background-color: blueviolet;
+            }
+        }
+        @keyframes mover {
+             0% {
+                transform: translate(0px,0px) ;
+             }
+             50% {
+                transform: translateX(calc(100vw - 150px));
+             }
+             100% {
+                transform:translateX(0px) ;
+             }
+        }
+
+        @keyframes rotar2d {
+            0% {
+                transform: rotate(0deg) scale(1,1);
+            }
+            100% {
+                transform: rotate(360deg) scale(0.5,0.5);
+            }
+        }
+        @keyframes cambiaFormas {
+            70% {
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            }
+            100% {
+                clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!--TRANSFORMACIONES 2D transform
+        => scalex(), scaley(), scale() => sin scarlarlo 100px es 1 en x y 1 en y
+        => transalateX(), translateY(), translate() => desplazar un elemento
+        => rotate(deg) => rotar pero en 2d, como un reloj, si positivo en sentido de las agujas del reloj.
+        =>  skewX(), skewY(), skeW() => como que lo inclina
+        EJERCICIO UN CAJA DIV Y DEBAJO LA IMAGEN Y QUE AL  HACER HOVER EL DIV EXTERNO SE VAYA DESAPARECIENDO
+    -->
+        <div class="escalar"></div>
+        <div class="circulo">hola</div>
+        <img class="taza" src="../Cabecera_pie_DEF/Lemafé_cabecera_pie/img/tazaopcion.jpg" alt="lemafe" >
+        <img  class= "logo" src="../Cabecera_pie_DEF/Lemafé_cabecera_pie/img/logotipo.png" alt="taza">
+        <div class="forma"></div>
+</body>
+</html>

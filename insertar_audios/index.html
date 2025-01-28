@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDIO</title>
+    <style>
+        audio { /*tiene una apariencia predeterminada por el navegador, necesitariamos js para modificarlo.*/
+            background-color:red;
+            border-radius:20px;
+            height:200px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--FORMAS INSERTAR AUDIO-->
+
+    <!--1 
+        => source => indica audio, pero en diferentes formatos-
+        => útil para indicar diferentes audios, para que ne caso de que el navegador no consiga
+        => reproducir un audio con un formato concreto, escoga otro que pueda ser compatible.
+        audio
+        source =>
+        atributo opcional => type => indica el tipo mime del archivo , es decir que formato va a tener el archivo
+        mismas opciones como forma2 => controls, autoplay ...
+        -->
+        <audio controls muted autoplay>
+            <source src="audio1.wav" type="audio/wav">
+            <!--
+             <source src="audio.mp3" type="audio/mp3"> 
+            <source src="adio.ogg" type="audio/ogg">
+            -->
+            No se ha podido cargar el audio.
+        </audio>
+     <!--2 FORMA
+     atributo obligatorio:
+     => src = ruta audio
+     atributos opcionales:
+    => controls => muestra el reproductor de sonido.
+    =>  autoplay => al cargar la página el audio se reproduce. (mucho navegadores tiene bloqueado esta opcion, habría que deshabilitarlo.)
+    => muted => al cargar la  página el audio no tenga sonido.
+    => loop => que el audio se reproduzca en bucle.
+    => hidden => oculta el reproducto de audio.
+    => preload => es como que el audio se carga antes de la pagina (no es usual).
+     
+     -->
+     <audio src="audio1.wav" controls autoplay muted>
+        No se ha podido cargar el audio <!--Texto opcional en caso de que no se haya cargado el audio-->
+     </audio>
+      <!--3 FORMA: DAR LA POSIBLIDAD AL USUARIO SI QUIERE REPRODUCIRLO O NO MEDIANTE UN LINK-->
+        <a href="audio1.wav">audio random</a>
+    <!--FORMAS DE  INSERTAS VÍDEOS-->
+    <!--
+        FORMA1
+    -->
+    <video width="40%" height="auto" controls autoplay>
+        <source src="chino_video.mp4" type="video/mp4">
+        <source src="chino_video2.webm" type="video/webm">
+        <source src="chino_video3.ogg" type="video/ogg">
+        Tu navegador no procesado bien el vídeo
+    </video>
+    
+</body>
+</html>
