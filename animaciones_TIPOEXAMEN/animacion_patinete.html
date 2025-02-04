@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        input {
+            display:block;
+        }
+
+        body {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        
+
+        img {
+            position:relative; /**/
+            left:0px; /*normalmente hay que ponerlas en el estado inicial*/
+            top:0px;
+            transform: rotateY(0deg) ;
+        }
+
+        #img1 {
+            /*
+            transition-property: left;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            */
+            transition:left 1s linear, transform 0.2s 0.8s linear;
+            /*0.2s => duracion*/
+            /*0.8s => delay*/
+        }
+
+
+        #trans:checked + img {
+          left:1000px;
+          transform: rotateY(180deg);
+        }
+
+        form {
+            height:50%;
+        }
+
+        img {
+            width:10%;
+            height:20%;
+        }
+
+        #anim:checked + img {
+            animation:desplazar 2s linear infinite
+        }
+        @keyframes desplazar {
+
+            0% {
+                left:0px;
+                transform: rotateY(0deg);
+            }
+
+            48%{
+                left:calc(100vw - 200px);
+                transform: rotateY(0deg);
+            }
+
+            50% {
+                left:500px;
+                transform: rotateY(180deg);
+            }
+
+            100%{
+                left:0px;
+                transform: rotateY(180deg);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <input type= "checkbox" id="trans">
+        <img src="patinete.png" alt="patinete" id="img1">
+        <input type="checkbox" id="anim">
+        <img src="patinete.png" alt="patinete">
+    </form>
+</body>
+</html>

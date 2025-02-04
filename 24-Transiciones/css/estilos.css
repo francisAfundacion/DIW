@@ -1,0 +1,55 @@
+/*
+TRANSICIONES
+=> Cambia las propiedades de un elemento html con una duración determinada.
+=> Cambio de un estado a otro.
+=> ¿Cómo se produce el cambio?
+    => A partir de un evento como un hover
+PROPIEDADES 
+    => transition: all 300ms linear
+    => transition-property: Se indican las propiedades css que se desean cambiar en la transición.
+    (width, height ...)
+        Si quiero que me cambie todas las propiedades animales => all
+    => NO HAY NOMBRE EN LA TRANSICIÓN COMO EN LA ANIMACION.
+    => HAY LA PROPIEDAD CSS QUE SE QUIERE CAMBIAR.
+    transition duration: duración de la transicion (PROP OBLOGATORIA)
+        => Se mide en s/ms.
+        => Por defecto es 0.
+    transition-delay : El retraso
+        => Se mide en s/ms.
+    tranisition_-timing-function: velocidad de la transición: linear, ease-in, ease-out, steps(Se utiliza tanto en 
+    transiciones Y ANIMACIONES, PERSONALIZA LOS SALTOS DE PASAR A UN FOTOGRAMA A OTRO O PROPIEDAD CSS A OTRA. Su valor es un número
+    
+    OBLIGATORIAS => transiton-property, duration 
+    Se asocia con un elemento html y usando transition
+*/
+
+/*boton que al hacer hover se cambie el color, la sombra*/
+
+/*SCALE TRANSFORM => ENTRA EXAMEN 
+
+
+*/
+
+/*cambiar color de fondo cada 5 s y solo que se produzca cuando haga hover sobre el botón*/
+
+#bot1 {
+    padding:80px 100px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px green;
+    background-color:red;
+    transition: 0.5s all linear;
+    /*
+    transition-property: all; /*todo lo que aparece que pueda ser animable aqui va acmabiar en vez escribir uno a uno
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    
+    /*transition: all 0.5s liear*/
+}
+
+#bot1:hover {
+    background-color: #f38b8b;
+    box-shadow: 2px 2px 4px pink;
+    transform: scale(1, 2);
+}
+
+

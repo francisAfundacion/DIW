@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+
+        }
+        .manazanas {
+            width:500px;
+            height:500px;
+            position:relative;
+            animation:comer_manzana 3s linear
+        }
+
+        .m1 , .m2, .m3, .m4, .m5 {
+            position:absolute;
+            left:50%;
+            right:50%;
+        }
+        
+        .m2 {
+            visibility: none;
+        }
+
+        .m3 {
+            visibility:none;
+        }
+
+        .m4 {
+            visibility:none;
+        }
+
+        .m5 {
+           visibility:none;
+        }
+
+        @keyframes comer_manzana{
+            0%{
+                .m1 {
+                    visibility: visible;
+                }
+            }
+            20% {
+                .m2 {
+                   visibility: visible;
+                }
+                .m1 {
+                    visibility: none;
+                }
+            }
+
+        }
+            /*
+            20% {
+
+                .m3 {
+                    visibility: visible;
+                }
+                .m2 {
+                    visibility: none;
+                }
+
+            }
+            40%{
+                .m3 {
+                    visibility: hidden;
+                }
+
+            }
+        
+            60%{
+
+            }
+            80%{
+                
+            }
+            100% {
+
+            }
+        }
+*/
+    </style>
+</head>
+<body>
+    <div class="manzanas">
+        <img src="manzana1.jpg" alt="estado1" class="m1">
+        <img src="manzana2.jpg" alt="estado2" class="m2">
+        <img src="manzana3.jpg" alt="estado3" class="m3">
+        <img src="manzana4.jpg" alt="estado4" class="m4">
+        <img src="manzana5.jpg" alt="estado5" class ="m5">
+    </div>
+
+
+</body>
+</html>

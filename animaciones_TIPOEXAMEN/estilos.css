@@ -1,0 +1,149 @@
+/*
+.pelota {
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    background-color: yellowgreen; Seria mejor ponerlo en el from o estado inicial, porque si no habra un sato de color raro
+    animation-name: cambiaPosicion, cambiarColor;
+    animation-name => es obligatorio, nombre animación creada.
+    animation-duration => es obliigatorio, ya que por defecto es 0 y ser positivo
+        Los valores pueden ser en s o ms.
+    animation-duration: 4s;
+    animation-iteration-count: infinite, 1, 2,3, 4
+         por defecto es 1.
+    
+    animation-iteration-count: infinite;
+    position:relative;
+    animation-direction:alternate-reverse;
+    animation-delay: -2s ;
+    se mide en s o ms
+    positivo o negativo
+    negativo  la animación ya está empezada
+     positivo  letarga
+    
+    ease, ease in,  ease out, case in, case out 
+    animation-timing-function:linear ;
+    velocidad de la función
+    animation: cambiaColor 4s linear infinite normal, cambiaPosicion 4s linear infinite normal;
+    animation-fill-mode
+      si la animación no se reproduce de forma infinite, como queda  el estado final:
+     forwards => se queda en el primer fotograma
+    backwards => se queda en el ultimo fotograma
+   animation-fill-mode: ;
+}
+*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#carrusel {
+    display:flex; /*me faltaba pq => sino las imagenes bajan al no coger*/
+    /*overflow: hidden;*/
+    width:300px;
+    /*wdith:400%*/
+    height:300px;
+    /*height:auto*/
+}
+
+#carrusel img {
+    width:100%;
+    height:100%;
+}
+
+.carrusel-item1{
+    animation: mover_img 5s linear infinite;
+}
+
+.carrusel-item2{
+    display:none;
+    animation: mover_img 5s linear infinite;
+
+}
+
+.carrusel-item3{
+    animation: mover_img 5s linear infinite;
+    display:none;
+}
+
+/*iria
+
+.slider {
+    display:flex;
+    height:100%
+    width:400%;
+}
+    img {
+        width:100%;
+        height:100%;
+    }
+    @keyframes desplazar {
+        0% {
+            margin-left:0;
+        }
+
+        25% {
+            margin-left:100%;
+        }
+        50% {
+            margin-left:-200%;
+        }
+        70% {
+            margin-left:-200%
+        }
+        100% {
+            margin-left:-300%
+        }
+
+    }
+
+
+*/
+
+
+@keyframes mover_img {
+
+    0% {
+        transform: translateX(0px);
+    }
+
+    15% {
+        transform: translateX(-50px);
+    }
+
+    25% {
+        transform: translateX(-100px);
+    }
+
+    35% {
+        transform: translateX(-120px);
+    }
+
+    50% {
+      
+        transform: translateX(-150px);
+    }
+    75% {
+        display:inline;
+        transform: translateX(-150px);
+    }
+
+    88% {
+        transform: translateX(-175px);
+
+    }
+    100% {
+        transform: translate(-200px);
+    }
+}
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        h1, h2 {
+            width:400px;
+        }
+
+        h1 {
+            position:relative;
+            top:0px;
+            left:0px;
+            font-size:30px;
+            z-index:2;
+        }
+
+        div.oculto {
+            position: absolute;
+            background-color: blue;
+            top:0px;
+            left:0px;
+            width: 0px;
+            height:30px;
+            transition: width 4s linear;
+            z-index: -10;
+        }
+
+        h1:hover > div {
+            width:600px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Diseño de interfaces<div class="oculto"></div></h1>
+    <h2>Diseño de interfaces</h2>
+</body>
+</html>

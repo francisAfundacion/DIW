@@ -23,17 +23,18 @@
     /*ease, ease in,  ease out, case in, case out */
     animation-timing-function:linear ;
     /*velocidad de la función*/
-    animation: cambiaColor 4s linea infinite normal, cambiaPosicion 4s linea infinite normal;
+    animation: cambiaColor 4s linear infinite normal, cambiaPosicion 4s linear infinite normal;
     /*animation-fill-mode
      => si la animación no se reproduce de forma infinite, como queda  el estado final:
      forwards => se queda en el primer fotograma
     backwards => se queda en el ultimo fotograma
 
     */
-    animation-fill-mode: ;
+   /* animation-fill-mode: ;*/
 }
 
 @keyframes cambiaColor {
+
   0%{
     background-color: yellowgreen; /*mejor poner el mismo estilo base*/
 }
