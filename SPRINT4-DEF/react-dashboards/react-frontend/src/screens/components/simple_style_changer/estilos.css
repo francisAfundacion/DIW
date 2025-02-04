@@ -1,0 +1,11 @@
+.simpleStyleChangerStyleNormal {
+    font-weight:normal
+}
+
+.simpleStyleChangerStyleLighter {
+    font-weight:lighter
+}
+
+.simpleStyleChangerStyleBold {
+    font-weight:bold;
+}
