@@ -26,7 +26,7 @@
     animation: cambiaColor 4s linear infinite normal, cambiaPosicion 4s linear infinite normal;
     /*animation-fill-mode
      => si la animación no se reproduce de forma infinite, como queda  el estado final:
-     forwards => se queda en el primer fotograma
+    forwards => se queda en el primer fotograma
     backwards => se queda en el ultimo fotograma
 
     */
