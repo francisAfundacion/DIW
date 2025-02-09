@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Audios</title>
+    </head>
+    <body>
+
+        <!-- Primera Forma -->
+        <audio controls muted autoplay>
+            <source src="audio1.wav" type="audio/wav">
+                No se ha podido cargar el audio.
+            <source src="audio.mp3" type="audio/mp3"> 
+            <source src="audio1.ogg" type="audio/ogg">
+        </audio>
+
+        <!-- Segunda forma -->
+        <audio src="audio1.wav" controls autoplay muted>
+            No se ha podido cargar el audio 
+        </audio>
+
+        <!-- Tercera forma: Dar la posibilidad al usuario si quiere reproducirlo mediante un link.-->
+        <a href="audio1.wav">audio random</a>
+    </body>
+</html>
