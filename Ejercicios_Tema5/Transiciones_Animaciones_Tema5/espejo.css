@@ -1,0 +1,64 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.375rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: hsl(355, 87%, 37%);
+    background-color: #dbb68c;
+}
+
+#espejo_bestia_container {
+    margin:0 auto;
+    width:50%;
+    position:relative;
+}
+
+
+#img_espejo {
+    position: absolute;
+    width:600px;
+    height:auto;
+    filter: brightness(0.2) contrast(0.8);
+    transition: filter 1s ease-in;
+    z-index: -1000;
+}
+
+#img_bestia {
+    position: absolute;
+    width:200px;
+    height:auto;
+    top:150px;
+    left:210px;
+    opacity:0 ;
+    transition: opacity 1s ease-in;
+    z-index: 1000;
+}
+
+#desvelar_check {
+    left:110px;
+    top:305px;
+    position: absolute;
+    z-index: 1000;
+    /*opacity: 1;*/
+   /* transition: opacity 1s ease-in, z-index 1s ease-in;*/
+}
+
+label[for="desvelar_check"] {
+    position: absolute;
+    left:0px;
+    top:300px;
+}
+
+
+#desvelar_check:checked ~ img#img_bestia  {
+    opacity:1;
+}
+
+#desvelar_check:checked + img#img_espejo {
+    filter: brightness(1);
+}
+    

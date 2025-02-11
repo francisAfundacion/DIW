@@ -1,0 +1,188 @@
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    height:100vh;
+    color:rgb(164, 218, 79);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/*Producir energía : 2 transiciones*/
+
+#chocar_manos_container {
+    display:flex;
+    min-height:30vh;
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: start; 
+}
+
+.palmas {
+    position:relative;
+    width:30vw;
+}
+
+.rasengan  {
+    width:10vw;
+    height:25vh;
+    position:absolute;
+    left:43%;
+    top:65%;
+    z-index:-2;
+    opacity: 0;
+    transform:  scale(0.10) rotateX(0deg);
+    transition: all 7s 1.5s ease-in-out;
+    overflow: hidden;
+}
+
+#chocar_manos:checked + div .rasengan {
+    opacity: 1;
+    transform: scale(0.75) rotateX(180deg); 
+}
+
+.mano {
+    position: absolute;
+    width:10vw; 
+    height:20vh;
+}
+
+.choca {
+    left:0;
+    transition: 1s all linear;
+}
+
+
+#chocar_manos:checked + div .choca {
+    transform: translateX(80%);
+}
+
+
+.girada {
+    transform:rotateY(-180deg) translateX(-180%);
+}
+/*--------------------PREGUNTAR IRIA-------------------------*/
+
+
+    #escenario_agua {
+        overflow: hidden;
+        display:flex;
+        flex-direction: column;
+        align-items: start;
+        position:relative;
+        background-image: url('../escaleras_mar.png');
+        width:100vw;
+        height:40vh;
+    }
+
+    #persona_caminando {
+        position:absolute;
+        transform: rotate(0deg);
+        width:4%;
+        height:20%;
+        top:30%;
+        left:0%;
+        transition: left 2s steps(10),top 2.5s 2s linear, transform 2.5s 2s ease-in ;
+    }
+
+    #caminar:checked + img {
+        left: 95%;
+        top: 62%;
+        transform: rotate(180deg);
+    }
+
+    #sangre {
+        transform: scale(1) rotateX(0deg);
+        opacity: 0;
+        position: absolute;
+        width:10%;
+        height:8%;
+        top:75%;
+        left:90%;
+        transition: all 6s 4s ease-in-out;
+    }
+    
+    #caminar:checked ~img#sangre {
+        opacity:1;
+        transform: scale(2) rotateX(120deg);
+    }
+
+
+    /*
+    .estado_persona {
+        position:absolute;
+        top:18.5%;
+        left:-580%;
+        display:flex;
+        width:20%;
+        height:20%;
+        transition:  left 2s steps(6);
+        overflow:hidden;
+    }
+
+    #persona_container {
+        top:18.5%;
+        left:0;
+        width:20%;
+        height:20%;
+    }
+
+    img.hombre_caminando {
+        top:18.5%;
+        position: absolute;
+        left:18.5%;
+        width:100%;
+        height:100%;
+    }
+
+    #caminar:checked + div {
+        left: 100%;
+    }
+*/
+
+
+/*
+@keyframes producir_huracan {
+
+    0% {
+        opacity: 0;
+        transform: scale(1) rotateX(0deg);
+    }
+
+    16% {
+        opacity: 0.25;
+        transform: scale(2) rotateX(60deg);
+
+    }
+
+    32% {
+        opacity: 0.5;
+        transform:  scale(4) rotateX(-60deg); 
+    }
+
+    48% {
+        opacity: 0.75;
+        transform:  scale(4) rotateX(60deg); 
+    }
+
+    64% {
+        opacity: 0.9;
+        transform: scale(4) rotateX(-60deg); 
+    }
+
+    100% {
+        opacity: 0.0;
+        transform: scale(4) rotateX(-60deg); 
+    }
+
+
+}
+    */
+    
+
+
+/*Hombre caminando*/
