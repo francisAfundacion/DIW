@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Audios</title>
+    </head>
+    <body>
+        <!-- Primera Forma -->
+        <audio controls muted autoplay>
+            <!--En teoría no debería funcionar el audio que se asocia al primer source. Para probar que coje el siguiente audio
+            recogido en el src de source de la lista de la etiqueta audio.--->
+            <source src="audio1.ogg" type="audio/ogg">  
+            <source src="audio1.wav" type="audio/wav">
+                No se ha podido cargar el audio.
+        </audio>
+
+        <!-- Segunda forma -->
+        <audio src="Cascada.flac" controls autoplay muted>
+            No se ha podido cargar el audio 
+        </audio>
+
+        <!-- Tercera forma: Dar la posibilidad al usuario si quiere reproducirlo mediante un link.-->
+        <a href="Cascada.wav">audio random</a>
+    </body>
+</html>

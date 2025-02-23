@@ -1,0 +1,35 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    font-size:1.2rem;
+    background-color: #ebcaa3;
+    color: brown;
+    height:100vh;
+}
+
+.letras_container {
+    width: 0rem;
+    height:1.2rem;
+    margin: 0 auto;
+    overflow:hidden;
+    animation: mostrar_letras 5s steps(20) forwards infinite;
+}
+
+.letras_container:hover {
+    width:24rem;
+}
+
+@keyframes mostrar_letras {
+    from {
+        width:0rem;
+    }
+
+    to {
+        width:24rem;
+    }
+}

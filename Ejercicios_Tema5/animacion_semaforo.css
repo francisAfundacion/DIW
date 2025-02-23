@@ -1,0 +1,40 @@
+ * {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+ }
+
+ body {
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 4%, 38%);
+ }
+
+#semaforo_container {
+    overflow: hidden;
+    width:247px;
+    height:auto;
+}
+
+#img_semaforos {
+    position:relative;
+    left:0;
+    animation: cambiar_color 3s steps(3) alternate;
+}
+
+
+
+@keyframes cambiar_color {
+
+    from {
+        left:-741px;
+    }
+
+    to {
+        left:0;
+    }
+
+
+}
